@@ -51,7 +51,7 @@ def callback():
 def handle_follow(event):
     profile = line_bot_api.get_profile(event.source.user_id)
 
-    user = User(id=profile.user_id, name=profile.display_name)
+    user = Users(id=profile.user_id, name=profile.display_name)
     db.session.add(user)
     db.session.commit()
     # print(profile.user_id, profile.display_name, profile.picture_url, profile.status_message)
@@ -68,7 +68,7 @@ def handle_follow(event):
 def handle_follow(event):
     Session = sessionmaker(bind=db_engine)
     s = Session()
-    s.query(User).filter(User.id == event.source.user_id).delete()
+    s.query(Users).filter(Users.id == event.source.user_id).delete()
     s.commit()
     current_app.logger.info(f'User delete {event.source.user_id}.')
 

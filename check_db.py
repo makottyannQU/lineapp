@@ -15,15 +15,15 @@ s = Session()
 
 # # print a table
 # query = f'''
-#         select * from "meal";
+#         select * from meal;
 #         '''
 # df = pd.read_sql(query, db_engine)
 # print(df)
 
 
 # # print a row
-# user=s.query(User).filter_by(id == 'U6c8f1bb0cfb39e08bb5052f6d6fb632d').first()
-# print(user)
+# users=s.query(Users).filter_by(id == 'U6c8f1bb0cfb39e08bb5052f6d6fb632d').first()
+# print(users)
 
 
 # # add a row
@@ -34,15 +34,15 @@ s = Session()
 
 
 # # delete a row
-# s.query(User).filter(User.id == 'U6c8f1bb0cfb39e08bb5052f6d6fb632d').delete()
+# s.query(Users).filter(Users.id == 'U6c8f1bb0cfb39e08bb5052f6d6fb632d').delete()
 # s.commit()
 
 
-# # marge tables user,meal,order
+# # marge tables users,meal,orders
 # user_id='U6c8f1bb0cfb39e08bb5052f6d6fb632d'
 # query = f'''
-#         select order1.date, "user".name, "meal".name, "meal".price  from ( select * from "order" where user_id = '{user_id}' )
-#         as order1 inner join "meal" on order1.meal_id = "meal".id inner join "user" on order1.user_id = "user".id ;
+#         select order1.date, users.name, meal.name, meal.price  from ( select * from orders where user_id = '{user_id}' )
+#         as order1 inner join meal on order1.meal_id = meal.id inner join users on order1.user_id = users.id ;
 #         '''
 # df = pd.read_sql(query, db_engine)
 # print(df)

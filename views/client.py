@@ -8,7 +8,8 @@ import datetime
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent, UnfollowEvent
-import psycopg2  # for psql in heroku
+# import psycopg2  # for psql in heroku
+import pymysql
 import requests
 import json
 

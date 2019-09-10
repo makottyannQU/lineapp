@@ -13,7 +13,8 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent, UnfollowEvent
 import jpholiday
-import psycopg2  # for psql in heroku
+# import psycopg2  # for psql in heroku
+import pymysql
 
 import settings
 from models import *

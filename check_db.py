@@ -3,7 +3,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from uuid import uuid4
 import pandas as pd
-import psycopg2  # for psql in heroku
+# import psycopg2  # for psql in heroku
+import pymysql
 
 import settings
 from models import *

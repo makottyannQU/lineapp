@@ -114,7 +114,7 @@ def postback(event):
     print(data)
     data_dic = ast.literal_eval(data)
     print(data_dic)
-    if data_dic['action'] == 'order':
+    if data_dic['action'] == 'rich_order':
         print(event.postback.params)
         # db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
         # Session = sessionmaker(bind=db_engine)

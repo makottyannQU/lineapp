@@ -22,7 +22,7 @@ $(function () {
 
 let meals = [];
 $.ajax({
-    url: '/get_meals',
+    url: './get_meals',
     type: 'get',
     dataType: "json",
     async: false,

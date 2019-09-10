@@ -1,0 +1,112 @@
+{
+"Follow_message":{
+"type": "text",
+"text": "こんにちは！\n友達追加ありがとうございます！\nこのアカウントはまこっちゃん弁当の注文が出来るBotです。\n\nBotによる注文の受付時間は\n【前日】13:00~21:00\n【当日】 7:00~11:40　 ※残りがある場合\nとなっております。\n\nお弁当の引き渡し・料金の支払いは\n【当日】11:40-12:15　@ウエスト３号館下\n にて行っております。\n引き渡しの際、机の上にある注文表の自分の名前を赤ペンで消してください。\n\nまた、Botでのキャンセルは当日10:00以降は受け付けておりませんのでご了承ください。\n\n平日はほとんど毎日お弁当を販売しております。ぜひご利用ください！"
+},
+"Select_kinds_size":{
+"type": "text",
+"text": "注文するお弁当の種類とサイズを選んでください。"
+},
+"Order_carousel":{
+  "type": "template",
+  "altText": "注文するお弁当の種類とサイズを選んでください。",
+  "template": {
+  "type": "carousel",
+  "actions": [],
+  "columns": [
+    {
+      "thumbnailImageUrl": "https://www.second-kitchen.net/upload/save_image/56_l.png",
+      "title": "チキン南蛮弁当",
+      "text": "a",
+      "actions": [
+        {
+          "type": "postback",
+          "data": "{'action':'chickenbig', 'size': 'L'}",
+          "label": "大（４００円）",
+          "text": "『チキン南蛮弁当 大』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "中（３５０円）",
+          "text": "『チキン南蛮弁当 中』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "小（３００円）",
+          "text": "『チキン南蛮弁当 小』を注文しました。"
+        }
+
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://www.second-kitchen.net/upload/save_image/11201931_5a12aef6c97eb.png",
+      "title": "唐揚げ弁当",
+      "text": " ",
+      "actions": [
+        {
+          "type": "message",
+          "label": "大（４００円）",
+          "text": "『唐揚げ弁当 大』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "中（３５０円）",
+          "text": "『唐揚げ弁当 中』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "小（３００円）",
+          "text": "『唐揚げ弁当 小』を注文しました。"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://www.second-kitchen.net/upload/save_image/31_l.png",
+      "title": "ハンバーグ弁当",
+      "text": "b",
+      "actions": [
+        {
+          "type": "message",
+          "label": "大（４００円）",
+          "text": "『ハンバーグ弁当 大』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "中（３５０円）",
+          "text": "『ハンバーグ弁当 中』を注文しました。"
+        },
+        {
+          "type": "message",
+          "label": "小（３００円）",
+          "text": "『ハンバーグ弁当 小』を注文しました。"
+        }
+      ]
+    }
+  ]
+}
+},
+  "Privacy_message": {
+  "type": "text",
+  "text": "初めてのご注文ありがとうございます！\n\nまこっちゃん弁当では、お客さまとのコミュニケーション向上を図るため簡単なアンケートを実施しております。\nお答えいただくとクーポンをお送りしますので、ぜひご協力ください！\n\n※ご入力いただく情報は九州大学の個人情報保護規約に基づき、厳重に取り扱います。\nhttps://www.kyushu-u.ac.jp/ja/university/disclosure/privacy/"
+  },
+  "Confirm_message": {
+  "type": "template",
+  "altText": "this is a confirm template",
+  "template": {
+    "type": "confirm",
+    "actions": [
+      {
+        "type": "message",
+        "label": "はい",
+        "text": "はい"
+      },
+      {
+        "type": "message",
+        "label": "いいえ",
+        "text": "いいえ"
+      }
+    ],
+    "text": "アンケートに答えますか？"
+  }
+  }
+}

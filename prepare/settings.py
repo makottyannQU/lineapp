@@ -5,6 +5,11 @@ import datetime
 access_token='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 secret_key='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
+# richmenu
+withcancel_richmenu_id = "richmenu-94696c816d15e60310442d3091f3d83e"
+withoutcancel_richmenu_id = "richmenu-aeba8b140b55dbe3f9b99554e71bfc02"
+none_richmenu_id = "richmenu-16e6e2e65f078bc7cb265ec3f67a90be"
+
 #DB
 db_info = {
     'user': 'aaaaaaaaaaaaaa',

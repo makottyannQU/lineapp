@@ -151,7 +151,7 @@ def addmeal():
                     m_price=m_price, l_price=l_price)
         db.session.add(meal)
         db.session.commit()
-        return redirect(url_for('meal'))
+        return redirect(url_for('.meal'))
     else:
         return render_template('addmeal.html')
 

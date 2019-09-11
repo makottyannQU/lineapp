@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 from flask_sqlalchemy import SQLAlchemy as SA
 
 
@@ -12,7 +12,7 @@ db = SQLAlchemy()
 
 
 def now():
-    return datetime.now().timestamp()
+    return datetime.datetime.now().timestamp()
 
 
 class Users(db.Model):
@@ -27,7 +27,7 @@ class Profile(db.Model):
     name = db.Column(db.Text, nullable=True)
     grade = db.Column(db.Integer, nullable=True)
     department = db.Column(db.Text, nullable=True)
-    couse = db.Column(db.Text, nullable=True)
+    course = db.Column(db.Text, nullable=True)
     club = db.Column(db.Text, nullable=True)
 
 class Orders(db.Model):

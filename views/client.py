@@ -18,8 +18,8 @@ import settings
 from models import *
 
 
-with open('jsn.json') as f:
-    jsn = json.load(f)
+# with open('jsn.json') as f:
+#     jsn = json.load(f)
 
 blueprint = Blueprint('client', __name__, url_prefix='/', static_folder='/views/static',
                       template_folder='/views/templates')
@@ -42,7 +42,7 @@ def operation():
     for time in settings.operationtime:
         if now<time[0]:
             return time[1]
-    return 'non'
+    return 'none'
 
 @blueprint.route("/callback", methods=['POST'])
 def callback():
@@ -129,9 +129,9 @@ def postback(event):
         # print(df)
 
         # 種類とサイズを選んで, 注文カルーセル
-        data_list = [jsn["Select_kinds_size"], jsn["Order_carousel"]]
-        data = {
-            'replyToken': token,
-            'messages': data_list
-        }
-        requests.post(reply_url, data=json.dumps(data), headers=headers)
+        # data_list = [jsn["Select_kinds_size"], jsn["Order_carousel"]]
+        # data = {
+        #     'replyToken': token,
+        #     'messages': data_list
+        # }
+        # requests.post(reply_url, data=make_json.dumps(data), headers=headers)

@@ -96,8 +96,7 @@ def addmenu():
                 else:
                     l_stock = 0
                 if s_stock + m_stock + l_stock > 0:
-                    menus.blueprintend(Menu(date=int(
-                        date), meal_id=meals[i], s_stock=s_stock, m_stock=m_stock, l_stock=l_stock))
+                    menus=(Menu(date=int(date), meal_id=meals[i], s_stock=s_stock, m_stock=m_stock, l_stock=l_stock))
         db.session.add_all(menus)
         db.session.commit()
         return redirect(url_for('index'))

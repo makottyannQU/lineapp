@@ -1,4 +1,8 @@
 $(function () {
+    console.log($('#registration_error'));
+    if ($('#registration_error').val() == 1) {
+        alert("エラー");
+    }
     $('#modal1').on('hide.bs.modal', function () {
         console.log("モーダルフェイドアウト時実行");
         let meal1 = $('#meal1');
@@ -22,7 +26,7 @@ $(function () {
 
 let meals = [];
 $.ajax({
-    url: './get_meals',
+    url: '/get_meals',
     type: 'get',
     dataType: "json",
     async: false,

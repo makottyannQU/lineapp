@@ -35,21 +35,21 @@ def order(info):
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 2,'date':" + str(
                         i['date']) + "}",
-                    "label": f"大 {i['l_price']}円",
+                    "label": f"大 {i['l_price']}円 {i['l_stock']}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 1,'date':" + str(
                         i['date']) + "}",
-                    "label": f"中 {i['m_price']}円",
+                    "label": f"中 {i['m_price']}円 {i['m_stock']}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 0,'date':" + str(
                         i['date']) + "}",
-                    "label": f"小 {i['s_price']}円",
+                    "label": f"小 {i['s_price']}円 {i['s_stock']}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 }
 

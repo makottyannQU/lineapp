@@ -116,6 +116,29 @@ def postback(event):
                     '''
             df = pd.read_sql(query, db_engine)
             df['image_path'] = img_url + df['image_path']
+
+            query = f'''
+                    select orders.meal_id, orders.size, sum(count) as count from ( select meal_id, size, count from orders
+                    where date = {date} and status != -1) as orders group by orders.meal_id, orders.size;
+                    '''
+            count = pd.read_sql(query, db_engine)
+
+            for i, row in count.iterrows():
+                size = row['size']
+                if size == 0:
+                    tmp = 's_stock'
+                elif size == 1:
+                    tmp = 'm_stock'
+                else:
+                    tmp = 'l_stock'
+                df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id']==row['meal_id']][tmp]-row['count']
+            df.loc[df['s_stock'] > 0, 's_stock'] = ''
+            df.loc[df['s_stock'] != '', 's_stock'] = '売り切れ'
+            df.loc[df['m_stock'] > 0, 'm_stock'] = ''
+            df.loc[df['m_stock'] != '', 'm_stock'] = '売り切れ'
+            df.loc[df['l_stock'] > 0, 'l_stock'] = ''
+            df.loc[df['l_stock'] != '', 'l_stock'] = '売り切れ'
+
             order_dict = df.to_dict(orient='records')
             reply_json.append(createjson.order(order_dict))
         else:

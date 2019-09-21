@@ -7,6 +7,8 @@ var events = {};
 var month = "";
 var year = "";
 var holiday = "";
+let order_check_list = {};
+// let order_check_count_dict = {};
 
 function createFrame() {
     ele.append('<div class="calendar-head"><button class="btn btn-default" id="beforebutton" onclick="beforemonth()">←前月</button><p class="calendar-year-month"></p><button class="btn btn-default" id="afterbutton" onclick="aftermonth()">翌月→</button></div>');
@@ -120,7 +122,7 @@ function setEvent() {
 
 function loadData(thisyear, thismonth) {
     $.ajax({
-        url: './update_calendar',
+        url: '/update_calendar',
         type: 'post',
         data: {
             'year': thisyear,
@@ -133,7 +135,11 @@ function loadData(thisyear, thismonth) {
             year = data.year;
             month = data.month;
             holiday = data.holiday;
+            order_check_list = data.order_check_list;
+            // order_check_count_dict = data.order_check_count_dict;
+            console.log(data);
         }
+       
     });
 
     this.printType(year, month);

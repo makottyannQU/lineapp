@@ -169,7 +169,7 @@ def dateseparate(date):  # date=20190911
 # # for ordercheck
 # size_list=['小','中','大']
 # query = f'''
-#         select s1.date, meal.name as meal_name, s1.size, users.name as user_name from orders where status = 1 as s1 inner join
+#         select s1.date, meal.name as meal_name, s1.size, users.name as user_name from (select * from orders where status = 1) as s1 inner join
 #         ( select max(date) as date from orders ) as s2 on s1.date = s2.date
 #         inner join users on s1.user_id = users.id inner join meal on s1.meal_id = meal.id order by s1.timestamp;
 #         '''
@@ -186,6 +186,7 @@ def dateseparate(date):  # date=20190911
 #         for size,size_group in size_grouped:
 #             tmp.append({'size':size_list[size],'member':size_group.user_name.to_list()})
 #         ordercheck_dict.append({'meal_name':meal_name,'each_size':tmp})
+# print(ordercheck_dict)
 
 
 # # check order num
@@ -225,8 +226,13 @@ def dateseparate(date):  # date=20190911
 # else:
 #     print('メニューがありません')
 
-query = f'''
-        select * from users;
-        '''
-df = pd.read_sql(query, db_engine)
-print(df)
+# query = f'''
+#         select max(date) as date from orders where status = 1;
+#         '''
+# df = pd.read_sql(query, db_engine)
+# print(df)
+
+
+# order=s.query(Orders).filter(Orders.date==20190916).first()
+# order.status=0
+# s.commit()

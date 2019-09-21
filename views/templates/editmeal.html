@@ -5,22 +5,23 @@
         {% if error %}
             <label style="color:#ff0000;">{{ error }}</label>
         {% endif %}
-        <form id="login-form" class="form" method="post" enctype=multipart/form-data>
+        <form id="login-form" class="form" method="post" action="./editmeal" enctype=multipart/form-data>
+            <input type=hidden name="id"  value="{{ selected_meal.id }}">
             <div class="form-group">
                 <label class="text-info">弁当名</label><br>
-                <input type="text" name="name" class="form-control">
+                <input type="text" name="name" class="form-control" value = "{{ selected_meal.name }}">
             </div>
             <div class="form-group">
                 <label class="text-info">小の値段</label><br>
-                <input type="text" name="s_price" class="form-control" value="300">
+                <input type="text" name="s_price" class="form-control" value="{{ selected_meal.s_price }}">
             </div>
             <div class="form-group">
                 <label class="text-info">中の値段</label><br>
-                <input type="text" name="m_price" class="form-control" value="350">
+                <input type="text" name="m_price" class="form-control" value="{{ selected_meal.m_price }}">
             </div>
             <div class="form-group">
                 <label class="text-info">大の値段</label><br>
-                <input type="text" name="l_price" class="form-control" value="400">
+                <input type="text" name="l_price" class="form-control" value="{{ selected_meal.l_price }}">
             </div>
             <div class="form-group">
                 <label for="myImage" class="btn btn-primary">
@@ -29,7 +30,9 @@
                            style="display: none">
                 </label>
             </div>
-            <div class="preview"></div>
+            <div class="preview">
+                <img width="300px" src="./{{ selected_meal.image  }}">
+            </div>
             <div class="form-group" style="margin-top: 10px">
                 <input type="submit" name="submit" class="btn btn-info btn-md" value="登録">
             </div>
@@ -58,7 +61,7 @@
                     // .prevewの領域の中にロードした画像を表示するimageタグを追加
                     $preview.append($('<img>').attr({
                         src: e.target.result,
-                        width: "150px",
+                        width: "300px",
                         class: "preview",
                         title: file.name
                     }));

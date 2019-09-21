@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, abort, redirect, render_template, url_for, Blueprint,send_from_directory
+from flask import Flask, request, abort, redirect, render_template, url_for, Blueprint, send_from_directory
 import pandas as pd
 import pymysql
 from sqlalchemy import create_engine
@@ -157,7 +157,6 @@ def editmenu():
         else:
             return render_template('index.html', error=1)
 
-
         for i in range(menu_count):
             # temp_stock_list.clear()
             # temp_list.clear()
@@ -209,7 +208,7 @@ def member():
 
 @blueprint.route('/meal')
 def meal():
-    query = f'select * from "meal";'
+    query = f'select * from meal;'
     df = pd.read_sql(query, db_engine)
     data = df.to_dict(orient='records')
     return render_template('meal.html', data=data)
@@ -271,18 +270,19 @@ def deletemeal():
     db.session.commit()
     return render_template('index.html', error=0)
 
+
 @blueprint.route('/look_in_DB')
 def look_in_DB():
-    query = f'select * from "meal";'
+    query = f'select * from meal;'
     df = pd.read_sql(query, db_engine)
     meals = df.to_dict(orient='records')
-    query = f'select * from "menu";'
+    query = f'select * from menu;'
     df = pd.read_sql(query, db_engine)
     menu = df.to_dict(orient='records')
-    query = f'select * from "orders";'
+    query = f'select * from orders;'
     df = pd.read_sql(query, db_engine)
     orders = df.to_dict(orient='records')
-    query = f'select * from "users";'
+    query = f'select * from users;'
     df = pd.read_sql(query, db_engine)
     users = df.to_dict(orient='records')
 
@@ -314,7 +314,7 @@ def addmeal():
 
 @blueprint.route('/ordercheck')
 def ordercheck():
-    col_max=10
+    col_max = 10
     size_list = ['小', '中', '大']
     query = f'''
             select s1.date, meal.name as meal_name, s1.size, users.name as user_name from (select * from orders where status = 1) as s1 inner join
@@ -326,27 +326,26 @@ def ordercheck():
         return render_template('no_order_view.html')
     else:
         date = str(df.date[0])
-        date=date[0:4]+'年'+date[4:6]+'月'+date[6:8]+'日'
+        date = date[0:4] + '年' + date[4:6] + '月' + date[6:8] + '日'
         ordercheck_dict = []
         meal_grouped = df.groupby('meal_name', sort=False)
         for meal_name, meal_group in meal_grouped:
-            num=0
-            num2=0
+            num = 0
+            num2 = 0
             size_grouped = meal_group.groupby('size', sort=False)
             tmp = []
             for size, size_group in size_grouped:
-                l=size_group.user_name.to_list()
-                tmp2=[]
+                l = size_group.user_name.to_list()
+                tmp2 = []
                 for i in range(0, len(l), col_max):
                     tmp2.append(l[i:i + col_max])
-                for i in range(col_max-len(tmp2[-1])):
+                for i in range(col_max - len(tmp2[-1])):
                     tmp2[-1].append('')
-                num+=len(l)
-                num2+=len(tmp2)
-                tmp.append({'size': size_list[size],'num':len(l),'span':len(tmp2), 'member': tmp2})
-            ordercheck_dict.append({'meal_name': meal_name, 'num':num, 'span':num2,'each_size': tmp})
-    return render_template('ordercheck.html',date=date,orders=ordercheck_dict)
-
+                num += len(l)
+                num2 += len(tmp2)
+                tmp.append({'size': size_list[size], 'num': len(l), 'span': len(tmp2), 'member': tmp2})
+            ordercheck_dict.append({'meal_name': meal_name, 'num': num, 'span': num2, 'each_size': tmp})
+    return render_template('ordercheck.html', date=date, orders=ordercheck_dict)
 
 
 @blueprint.route('/update_calendar', methods=['POST'])
@@ -356,8 +355,8 @@ def update_calendar():
     holiday = [str(x[0].day) for x in jpholiday.month_holidays(year, month)]
     ym = f'{year:04d}{month:02d}'
     query = f'''
-            select menu.date, "meal".name,"menu".meal_id, "menu".s_stock,"menu".m_stock ,"menu".l_stock from ( select * from "menu" where date between {ym}00 and {ym}32)
-            as menu inner join "meal" on menu.meal_id = "meal".id;
+            select menu.date, meal.name,menu.meal_id, menu.s_stock,menu.m_stock ,menu.l_stock from ( select * from menu where date between {ym}00 and {ym}32)
+            as menu inner join meal on menu.meal_id = meal.id;
             '''
     df = pd.read_sql(query, db_engine)
     menus = []
@@ -432,10 +431,11 @@ def update_calendar():
 
 @blueprint.route('/get_meals', methods=['GET'])
 def get_meals():
-    query = f'select * from "meal";'
+    query = f'select * from meal;'
     df = pd.read_sql(query, db_engine)
     meals = df.to_dict(orient='records')
     return json.dumps(meals, ensure_ascii=False)
+
 
 @blueprint.route('/upload/<string:path>')
 def upload(path):

@@ -91,5 +91,14 @@ def nonenight():
         s.commit()
 
 
+def upgrade():
+    Session = sessionmaker(bind=db_engine)
+    s = Session()
+    profile = s.query(Profile).filter(Profile.grade > 0).all()
+    for row in profile:
+        row.grade=row.grade+1
+    s.commit()
+
+
 if __name__ == '__main__':
     withcancel()

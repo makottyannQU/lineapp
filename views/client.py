@@ -28,6 +28,8 @@ s = Session()
 line_bot_api = LineBotApi(settings.access_token)
 handler = WebhookHandler(settings.secret_key)
 
+size_list = ['小', '中', '大']
+
 #  http postする時のヘッダー
 headers = {
     'Content-Type': 'application/json',
@@ -44,6 +46,16 @@ def operation():
         if now < time[0]:
             return time[1]
     return 'none'
+
+
+def notify(message):
+    line_notify_api = 'https://notify-api.line.me/api/notify'
+    group_headers = {'Authorization': 'Bearer ' + settings.notify_token}
+    payload = {'message': message}
+    try:
+        requests.post(line_notify_api, data=payload, headers=group_headers)
+    except:
+        current_app.logger.debug('LINE Notify Error : ' + message)
 
 
 @blueprint.route("/callback", methods=['POST'])
@@ -131,7 +143,7 @@ def postback(event):
                     tmp = 'm_stock'
                 else:
                     tmp = 'l_stock'
-                df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id']==row['meal_id']][tmp]-row['count']
+                df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id'] == row['meal_id']][tmp] - row['count']
 
             order_dict = df.to_dict(orient='records')
             reply_json.append(createjson.order(order_dict))
@@ -248,6 +260,8 @@ def postback(event):
                                 reply_json.append(createjson.enquete_message())
                                 reply_json.append(createjson.enquete_confirm())
 
+                            meal = s.query(Meal).filter_by(id=meal_id).first()
+                            notify(f'{name}が『{meal.name} {size_list[size]}』を注文しました')
                     else:
                         order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size)
                         s.add(order)
@@ -270,6 +284,8 @@ def postback(event):
                             reply_json.append(createjson.enquete_message())
                             reply_json.append(createjson.enquete_confirm())
 
+                        meal = s.query(Meal).filter_by(id=meal_id).first()
+                        notify(f'{name}が『{meal.name} {size_list[size]}』を注文しました')
                 else:
                     reply_json.append(createjson.text('売り切れました'))
             else:
@@ -288,13 +304,17 @@ def postback(event):
             orders.status = -1
             s.commit()
             reply_json.append(createjson.text("キャンセルが完了しました"))
+
+            user = s.query(Users).filter_by(id=user_id).first()
+            meal = s.query(Meal).filter_by(id=meal_id).first()
+            notify(f'{user.name}が『{meal.name} {size_list[size]}』をキャンセルしました')
         else:
             reply_json.append(createjson.text("キャンセルできませんでした"))
 
 
     elif data_dic['action'] == 'enquete_agree':
         profile = s.query(Profile).filter_by(user_id=user_id).first()
-        if profile==None:
+        if profile == None:
             s.add(Profile(user_id=user_id))
             s.commit()
         reply_json.append(createjson.enquete_grade())
@@ -302,10 +322,10 @@ def postback(event):
     elif data_dic['action'] == 'enquete_grade':
         value = data_dic['value']
         profile = s.query(Profile).filter_by(user_id=user_id).first()
-        if profile==None:
-            s.add(Profile(user_id=user_id,grade=value))
+        if profile == None:
+            s.add(Profile(user_id=user_id, grade=value))
         else:
-            profile.grade=value
+            profile.grade = value
         s.commit()
         reply_json.append(createjson.enquete_department())
 
@@ -322,7 +342,7 @@ def postback(event):
         else:
             course = courselist[0]
             if profile == None:
-                s.add(Profile(user_id=user_id, department=value,course=course))
+                s.add(Profile(user_id=user_id, department=value, course=course))
             else:
                 profile.department = value
                 profile.course = course
@@ -333,10 +353,10 @@ def postback(event):
     elif data_dic['action'] == 'enquete_course':
         value = data_dic['value']
         profile = s.query(Profile).filter_by(user_id=user_id).first()
-        if profile==None:
-            s.add(Profile(user_id=user_id,course=value))
+        if profile == None:
+            s.add(Profile(user_id=user_id, course=value))
         else:
-            profile.course=value
+            profile.course = value
         s.commit()
         reply_json.append(createjson.text('ご協力ありがとうございました!'))
 

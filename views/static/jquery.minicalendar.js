@@ -122,7 +122,7 @@ function setEvent() {
 
 function loadData(thisyear, thismonth) {
     $.ajax({
-        url: '/update_calendar',
+        url: './update_calendar',
         type: 'post',
         data: {
             'year': thisyear,

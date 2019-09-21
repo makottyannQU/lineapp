@@ -68,7 +68,7 @@ def callback():
 def message_text(event):
     user_id = event.source.user_id
     text = event.message.text
-    current_app.logger.debug(user_id, text)
+    current_app.logger.debug(f'user_id:{user_id} text:{text}')
 
     message = '''このアカウントから個別に返信することはできません。
 店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
@@ -82,7 +82,7 @@ def postback(event):
     reply_json = []
     data = event.postback.data
     user_id = event.source.user_id
-    current_app.logger.debug(user_id, data)
+    current_app.logger.debug(f'user_id:{user_id} text:{data}')
 
     data_dic = ast.literal_eval(data)
     operation_status = operation()
@@ -347,6 +347,6 @@ def postback(event):
         return 0
 
     data = {'replyToken': event.reply_token, 'messages': reply_json}
-    current_app.logger.debug(data)
+    current_app.logger.debug(str(data))
     res = requests.post(reply_url, data=json.dumps(data), headers=headers)
     # print(res.text)  # for error check

@@ -26,6 +26,18 @@ def text(t):
 def order(info):
     columns = []
     for i in info:
+        if i['l_stock']>0:
+            l_text=f'{i["l_price"]}円'
+        else:
+            l_text='売り切れ'
+        if i['m_stock']>0:
+            m_text=f'{i["m_price"]}円'
+        else:
+            m_text='売り切れ'
+        if i['s_stock']>0:
+            s_text=f'{i["s_price"]}円'
+        else:
+            s_text='売り切れ'
         bento_info = {
             "thumbnailImageUrl": i['image_path'],
             "title": i['meal_name'],
@@ -35,21 +47,21 @@ def order(info):
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 2,'date':" + str(
                         i['date']) + "}",
-                    "label": f"大 {i['l_price']}円 {i['l_stock']}",
+                    "label": f"大 {l_text}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 1,'date':" + str(
                         i['date']) + "}",
-                    "label": f"中 {i['m_price']}円 {i['m_stock']}",
+                    "label": f"中 {m_text}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 0,'date':" + str(
                         i['date']) + "}",
-                    "label": f"小 {i['s_price']}円 {i['s_stock']}",
+                    "label": f"小 {s_text}",
                     # "text": f"『{i['meal_name']}』を注文しました。"
                 }
 
@@ -127,6 +139,18 @@ def menu_info(menu_dict):
     json = {
         "type": "text",
         "text": '\n'.join(menu_list)
+    }
+    return json
+
+
+def enquete_message():
+    json = {
+        "type": "text",
+        "text": '''まこっちゃん弁当では、お客さまとのコミュニケーション向上を図るため簡単なアンケートを実施しております。
+お答えいただくとクーポンをお送りしますので、ぜひご協力ください！
+
+※ご入力いただいた情報は九州大学の個人情報保護規約に基づき、厳重に取り扱います。
+https://www.kyushu-u.ac.jp/ja/university/disclosure/privacy/'''
     }
     return json
 

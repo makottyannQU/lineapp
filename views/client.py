@@ -64,17 +64,17 @@ def callback():
     return 'OK'
 
 
-@handler.add(MessageEvent, message=TextMessage)
-def message_text(event):
-    user_id = event.source.user_id
-    text = event.message.text
-    current_app.logger.debug(f'user_id:{user_id} text:{text}')
-
-    message = '''このアカウントから個別に返信することはできません。
-店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
-http://aaaaaa'''
-
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+# @handler.add(MessageEvent, message=TextMessage)
+# def message_text(event):
+#     user_id = event.source.user_id
+#     text = event.message.text
+#     current_app.logger.debug(f'user_id:{user_id} text:{text}')
+#
+#     message = '''このアカウントから個別に返信することはできません。
+# 店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
+# http://aaaaaa'''
+#
+#     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
 
 
 @handler.add(PostbackEvent)
@@ -132,12 +132,6 @@ def postback(event):
                 else:
                     tmp = 'l_stock'
                 df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id']==row['meal_id']][tmp]-row['count']
-            df.loc[df['s_stock'] > 0, 's_stock'] = ''
-            df.loc[df['s_stock'] != '', 's_stock'] = '売り切れ'
-            df.loc[df['m_stock'] > 0, 'm_stock'] = ''
-            df.loc[df['m_stock'] != '', 'm_stock'] = '売り切れ'
-            df.loc[df['l_stock'] > 0, 'l_stock'] = ''
-            df.loc[df['l_stock'] != '', 'l_stock'] = '売り切れ'
 
             order_dict = df.to_dict(orient='records')
             reply_json.append(createjson.order(order_dict))
@@ -236,7 +230,7 @@ def postback(event):
                             order.size = size
                             order.status = 1
                             s.commit()
-                            reply_json.append(createjson.text('注文が完了しました\nありがとうございます(^o^)'))
+                            reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
 
                             users = s.query(Users).filter_by(id=user_id, status=1).first()
                             name = line_bot_api.get_profile(user_id).display_name
@@ -248,15 +242,17 @@ def postback(event):
                                 s.add(Users(id=user_id, name=name))
                             s.commit()
 
-                            profile = s.query(Profile).filter_by(user_id=user_id).first()
+                            # profile = s.query(Profile).filter_by(user_id=user_id).first()
+                            profile = None
                             if profile == None:
+                                reply_json.append(createjson.enquete_message())
                                 reply_json.append(createjson.enquete_confirm())
 
                     else:
                         order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size)
                         s.add(order)
                         s.commit()
-                        reply_json.append(createjson.text('注文が完了しました\nありがとうございます(^o^)'))
+                        reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
 
                         users = s.query(Users).filter_by(id=user_id, status=1).first()
                         name = line_bot_api.get_profile(user_id).display_name
@@ -268,8 +264,10 @@ def postback(event):
                             s.add(Users(id=user_id, name=name))
                         s.commit()
 
-                        profile = s.query(Profile).filter_by(user_id=user_id).first()
+                        # profile = s.query(Profile).filter_by(user_id=user_id).first()
+                        profile = None
                         if profile == None:
+                            reply_json.append(createjson.enquete_message())
                             reply_json.append(createjson.enquete_confirm())
 
                 else:
@@ -328,7 +326,7 @@ def postback(event):
             else:
                 profile.department = value
                 profile.course = course
-            reply_json.append(createjson.text('ご協力ありがとうございました。'))
+            reply_json.append(createjson.text('ご協力ありがとうございました!'))
         s.commit()
 
 
@@ -340,7 +338,7 @@ def postback(event):
         else:
             profile.course=value
         s.commit()
-        reply_json.append(createjson.text('ご協力ありがとうございました。'))
+        reply_json.append(createjson.text('ご協力ありがとうございました!'))
 
 
     else:

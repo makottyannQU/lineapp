@@ -1,7 +1,236 @@
+import datetime
+import settings
+
+def dateseparate(date):  # date=20190911
+    yobi = ["月", "火", "水", "木", "金", "土", "日"]
+    date = datetime.datetime.strptime(str(date), '%Y%m%d')
+    year = int(date.strftime('%Y'))
+    month = int(date.strftime('%m'))
+    day = int(date.strftime('%d'))
+    week = date.weekday()
+    return {'year': year, 'month': month, 'day': day, 'week': yobi[week]}
+
+def date2str(date):
+    ds=dateseparate(date)
+    return f'{ds["month"]:2d}月{ds["day"]:2d}日({ds["week"]}) '
+
+
+def text(t):
+    json = {
+        "type": "text",
+        "text": t
+    }
+    return json
+
+
 def order(info):
-    json = {'id':info['id']}
+    columns = []
+    for i in info:
+        bento_info = {
+            "thumbnailImageUrl": i['image_path'],
+            "title": i['meal_name'],
+            "text": date2str(i['date']),
+            "actions": [
+                {
+                    "type": "postback",
+                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 2,'date':" + str(
+                        i['date']) + "}",
+                    "label": f"大 {i['l_price']}円",
+                    # "text": f"『{i['meal_name']}』を注文しました。"
+                },
+                {
+                    "type": "postback",
+                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 1,'date':" + str(
+                        i['date']) + "}",
+                    "label": f"中 {i['m_price']}円",
+                    # "text": f"『{i['meal_name']}』を注文しました。"
+                },
+                {
+                    "type": "postback",
+                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 0,'date':" + str(
+                        i['date']) + "}",
+                    "label": f"小 {i['s_price']}円",
+                    # "text": f"『{i['meal_name']}』を注文しました。"
+                }
+
+            ]
+        }
+        columns.append(bento_info)
+
+    json = {
+        "type": "template",
+        "altText": "注文するお弁当の種類とサイズを選んでください。",
+        "template": {
+            "type": "carousel",
+            "actions": [],
+            "columns": columns
+        }
+    }
+    return json
+
+
+def cancel_confirm(cancel_dict):
+    if cancel_dict['size'] == 0:
+        size = "小"
+    elif cancel_dict['size'] == 1:
+        size = "中"
+    elif cancel_dict['size'] == 2:
+        size = "大"
+    json = {
+        "type": "template",
+        "altText": "キャンセル確認",
+        "template": {
+            "type": "confirm",
+            "actions": [
+                {
+                    "type": "postback",
+                    "data": "{'action':'cancelyes', 'date':" + str(cancel_dict['date']) + ", 'meal_id':'" + cancel_dict[
+                        'meal_id'] + "', 'size':" + str(cancel_dict['size']) + "}",
+                    "label": "はい",
+                    # "text": "はい"
+                },
+                {
+                    "type": "postback",
+                    "data": "{'action':'cancelno'}",
+                    "label": "いいえ",
+                    # "text": "いいえ"
+                }
+            ],
+            "text": f"{date2str(cancel_dict['date'])} の『{cancel_dict['meal_name']}　{size}』をキャンセルしてよろしいですか？"
+        }
+    }
+    return json
+
+
+def check_order(check_dict):
+    if check_dict['size'] == 0:
+        size = "小"
+    elif check_dict['size'] == 1:
+        size = "中"
+    elif check_dict['size'] == 2:
+        size = "大"
+    json = {
+        "type": "text",
+        "text": f"{date2str(check_dict['date'])} 『{check_dict['meal_name']} {size}』の注文があります。"
+    }
+    return json
+
+
+def menu_info(menu_dict):
+    menu_list = []
+    for day in menu_dict:
+        menu_text = date2str(day['date'])
+        for i in day['meals']:
+            menu_text += f'「{i}」 '
+        menu_list.append(menu_text)
+
+    json = {
+        "type": "text",
+        "text": '\n'.join(menu_list)
+    }
+    return json
+
+
+def enquete_confirm():
+    json = {
+        "type": "template",
+        "altText": "アンケート同意確認",
+        "template": {
+            "type": "confirm",
+            "actions": [
+                {
+                    "type": "postback",
+                    "data": "{'action':'enquete_agree'}",
+                    "label": "はい",
+                    # "text": "はい"
+                },
+                {
+                    "type": "postback",
+                    "data": "{'action':'enquetea_disagree'}",
+                    "label": "いいえ",
+                    # "text": "いいえ"
+                }
+            ],
+            "text": f"アンケートに答えますか？"
+        }
+    }
+    return json
+
+def enquete_grade():
+    tmp=[]
+    for k,v in settings.grade.items():
+        a = {
+            "type": "action",
+            "action": {
+                "type": "postback",
+                "label": k,
+                "data": "{'action':'enquete_grade', 'value':" + str(v) + "}",
+                # "text": k
+            }
+        }
+        tmp.append(a)
+
+    json = {
+        "type": "text",
+        "text": "学年を選択してください",
+        "quickReply": {
+            "items": tmp
+        }
+    }
+
+    return json
+
+
+def enquete_department():
+    tmp=[]
+    for k,v in settings.department.items():
+        a = {
+            "type": "action",
+            "action": {
+                "type": "postback",
+                "label": k,
+                "data": "{'action':'enquete_department', 'value':'" + k + "'}",
+                # "text": k
+            }
+        }
+        tmp.append(a)
+
+    json = {
+        "type": "text",
+        "text": "学部を選択してください",
+        "quickReply": {
+            "items": tmp
+        }
+    }
+
+    return json
+
+
+def enquete_course(courselist):
+    courselist.append('その他')
+    tmp=[]
+    for v in courselist:
+        a = {
+            "type": "action",
+            "action": {
+                "type": "postback",
+                "label": v,
+                "data": "{'action':'enquete_course', 'value':'" + v + "'}",
+                # "text": v
+            }
+        }
+        tmp.append(a)
+
+    json = {
+        "type": "text",
+        "text": "学科を選択してください",
+        "quickReply": {
+            "items": tmp
+        }
+    }
+
     return json
 
 
 if __name__ == '__main__':
-    print(order({'id':'aaa'}))
+    print(order({'id': 'aaa'}))

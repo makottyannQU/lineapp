@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from flask import request, abort,Blueprint,current_app
+from flask import request, abort, Blueprint, current_app
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 import numpy as np
 import datetime
@@ -13,36 +13,38 @@ import pymysql
 import requests
 import json
 import ast
+import createjson
 
 import settings
 from models import *
-
-
-# with open('jsn.json') as f:
-#     jsn = json.load(f)
 
 blueprint = Blueprint('client', __name__, url_prefix='/', static_folder='/views/static',
                       template_folder='/views/templates')
 
 db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
+Session = sessionmaker(bind=db_engine)
+s = Session()
 
 line_bot_api = LineBotApi(settings.access_token)
 handler = WebhookHandler(settings.secret_key)
 
 #  http postする時のヘッダー
 headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + settings.access_token
-    }
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + settings.access_token
+}
 # replyする時はここにjsonをpostする
 reply_url = 'https://api.line.me/v2/bot/message/reply'
+img_url = settings.img_url
+
 
 def operation():
-    now=datetime.datetime.now().time()
+    now = datetime.datetime.now().time()
     for time in settings.operationtime:
-        if now<time[0]:
+        if now < time[0]:
             return time[1]
     return 'none'
+
 
 @blueprint.route("/callback", methods=['POST'])
 def callback():
@@ -62,76 +64,266 @@ def callback():
     return 'OK'
 
 
-# @handler.add(FollowEvent)
-# def handle_follow(event):
-#     profile = line_bot_api.get_profile(event.source.user_id)
-#
-#     user = User(id=profile.user_id, name=profile.display_name)
-#     db.session.add(user)
-#     db.session.commit()
-#     # print(profile.user_id, profile.display_name, profile.picture_url, profile.status_message)
-#     app.logger.info(f'User add {profile.user_id}.')
-#     data = jsn["Follow_message"]
-#     # text = f'初めまして{profile.display_name}さん\nまこっちゃん弁当です'
-#     line_bot_api.reply_message(
-#         event.reply_token,
-#         TextSendMessage(data["text"])
-#     )
-#
-#
-# @handler.add(UnfollowEvent)
-# def handle_follow(event):
-#     Session = sessionmaker(bind=db_engine)
-#     s = Session()
-#     s.query(User).filter(User.id == event.source.user_id).delete()  # statusを0にする
-#     s.commit()
-#     app.logger.info(f'User delete {event.source.user_id}.')
+@handler.add(MessageEvent, message=TextMessage)
+def message_text(event):
+    user_id = event.source.user_id
+    text = event.message.text
+    print(user_id, text)
 
+    message = '''このアカウントから個別に返信することはできません。
+店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
+http://aaaaaa'''
 
-# @handler.add(MessageEvent, message=TextMessage)
-# def message_text(event):
-#     # 入力された文字列を格納
-#     push_txt = event.message.text
-#
-#     token = event.reply_token
-#     rtext = event.message.text
-#
-#     # メッセージによって分岐
-#     if push_txt == '注文':
-#         # 種類とサイズを選んで, 注文カルーセル
-#         data_list = [jsn["Select_kinds_size"], jsn["Order_carousel"]]
-#         data = {
-#             'replyToken': token,
-#             'messages': data_list
-#         }
-#
-#         requests.post(reply_url, data=json.dumps(data), headers=headers)
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+
 
 @handler.add(PostbackEvent)
 def postback(event):
+    reply_json = []
     data = event.postback.data
-    token = event.reply_token
-    print(data)
-    data_dic = ast.literal_eval(data)
-    print(data_dic)
-    if data_dic['action'] == 'rich_order':
-        print(event.postback.params)
-        # db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
-        # Session = sessionmaker(bind=db_engine)
-        # s = Session()
-        #
-        # query = f'''
-        #         select meal.id, meal.name, meal.image, meal.s_price, meal.m_price, meal.l_price, menu.date
-        #         from "meal" inner join "menu" on meal.id = menu.meal_id
-        #         where menu.date = '20190801';
-        #         '''
-        # df = pd.read_sql(query, db_engine)
-        # print(df)
+    user_id = event.source.user_id
+    print(user_id, data)
 
-        # 種類とサイズを選んで, 注文カルーセル
-        # data_list = [jsn["Select_kinds_size"], jsn["Order_carousel"]]
-        # data = {
-        #     'replyToken': token,
-        #     'messages': data_list
-        # }
-        # requests.post(reply_url, data=make_json.dumps(data), headers=headers)
+    data_dic = ast.literal_eval(data)
+    operation_status = operation()
+    if operation_status == 'none':
+        return 0
+    now = datetime.datetime.now()
+
+    if data_dic['action'] == 'rich_none':
+        return 0
+
+
+    elif data_dic['action'] == 'rich_order':
+        if operation_status == 'am':
+            date = now
+        elif operation_status == 'pm':
+            date = now + datetime.timedelta(days=1)
+        else:
+            return 0
+
+        date = date.strftime('%Y%m%d')
+        query = f'''
+                select date from menu where date >= {date} order by date limit 1;
+                '''
+        df = pd.read_sql(query, db_engine)
+        if len(df) > 0:
+            date = df.date[0]
+            query = f'''
+                    select menu.date, menu.meal_id, meal.name as meal_name, meal.image as image_path, meal.s_price,
+                    meal.m_price, meal.l_price, menu.s_stock, menu.m_stock, menu.l_stock
+                    from (select * from menu where date = {date}) as menu inner join meal on menu.meal_id = meal.id;
+                    '''
+            df = pd.read_sql(query, db_engine)
+            df['image_path'] = img_url + df['image_path']
+            order_dict = df.to_dict(orient='records')
+            reply_json.append(createjson.order(order_dict))
+        else:
+            reply_json.append(createjson.text("現在、注文できるメニューがありません"))
+
+
+    elif data_dic['action'] == 'rich_check':
+        if operation_status == 'am':
+            date = now
+        elif operation_status == 'pm':
+            date = now + datetime.timedelta(days=1)
+        date = date.strftime('%Y%m%d')
+        query = f'''
+                select orders.date, orders.meal_id, meal.name as meal_name, orders.size from ( select * from orders
+                where date >= {date} and user_id = '{user_id}' and status = 1 ) as orders inner join meal on orders.meal_id = meal.id;
+                '''
+        df = pd.read_sql(query, db_engine)
+        if len(df) > 0:
+            check_dict = df.iloc[0].to_dict()
+            reply_json.append(createjson.check_order(check_dict))
+        else:
+            reply_json.append(createjson.text("注文がありません"))
+
+
+    elif data_dic['action'] == 'rich_cancel':
+        if operation_status == 'am':
+            date = now
+        elif operation_status == 'pm':
+            date = now + datetime.timedelta(days=1)
+        date = date.strftime('%Y%m%d')
+        query = f'''
+                select orders.date, orders.meal_id, meal.name as meal_name, orders.size from ( select * from orders
+                where date >= {date} and user_id = '{user_id}' and status = 1 ) as orders inner join meal on orders.meal_id = meal.id;
+                '''
+        df = pd.read_sql(query, db_engine)
+        if len(df) > 0:
+            cancel_dict = df.iloc[0].to_dict()
+            reply_json.append(createjson.cancel_confirm(cancel_dict))
+        else:
+            reply_json.append(createjson.text("注文がありません"))
+
+
+    elif data_dic['action'] == 'rich_menu':
+        if operation_status == 'am':
+            date = now
+        elif operation_status == 'pm':
+            date = now + datetime.timedelta(days=1)
+        date = date.strftime('%Y%m%d')
+        query = f'''
+                select menu.date, meal.name as meal_name from ( select * from menu where date >= {date} )
+                as menu inner join meal on menu.meal_id = meal.id order by date;
+                '''
+        df = pd.read_sql(query, db_engine)
+        grouped = df.groupby('date', sort=False)
+        menu_dict = []
+        for date, group in grouped:
+            menu_dict.append({'date': date, 'meals': group.meal_name.to_list()})
+
+        if len(menu_dict) == 0:
+            reply_json.append(createjson.text("メニューがありません"))
+        else:
+            reply_json.append(createjson.menu_info(menu_dict))
+
+
+    elif data_dic['action'] == 'order':
+        order_date = data_dic['date']
+        meal_id = data_dic['meal_id']
+        size = data_dic['size']
+
+        if operation_status == 'am':
+            date = now
+        elif operation_status == 'pm':
+            date = now + datetime.timedelta(days=1)
+        date = int(date.strftime('%Y%m%d'))
+
+        if order_date < date:
+            reply_json.append(createjson.text("その商品は注文できません。"))
+        else:
+            menu = s.query(Menu).filter_by(date=order_date, meal_id=meal_id).first()
+            if menu:
+                count = s.query(Orders).filter_by(date=order_date, meal_id=meal_id, size=size, status=1).count()
+                if size == 0:
+                    stock = menu.s_stock
+                elif size == 1:
+                    stock = menu.m_stock
+                else:
+                    stock = menu.l_stock
+                if count < stock:
+                    order = s.query(Orders).filter_by(user_id=user_id, date=order_date).first()
+                    if order:
+                        if order.status == 1:
+                            reply_json.append(createjson.text('すでに注文があります。\n注文を変更する場合は現在の注文をキャンセルしてから注文してください。'))
+                        else:
+                            order.meal_id = meal_id
+                            order.size = size
+                            order.status = 1
+                            s.commit()
+                            reply_json.append(createjson.text('注文が完了しました\nありがとうございます(^o^)'))
+
+                            users = s.query(Users).filter_by(id=user_id, status=1).first()
+                            name = line_bot_api.get_profile(user_id).display_name
+                            if users:
+                                if users.status != 1:
+                                    users.status = 1
+                                users.name = name
+                            else:
+                                s.add(Users(id=user_id, name=name))
+                            s.commit()
+
+                            profile = s.query(Profile).filter_by(user_id=user_id).first()
+                            if profile == None:
+                                reply_json.append(createjson.enquete_confirm())
+
+                    else:
+                        order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size)
+                        s.add(order)
+                        s.commit()
+                        reply_json.append(createjson.text('注文が完了しました\nありがとうございます(^o^)'))
+
+                        users = s.query(Users).filter_by(id=user_id, status=1).first()
+                        name = line_bot_api.get_profile(user_id).display_name
+                        if users:
+                            if users.status != 1:
+                                users.status = 1
+                            users.name = name
+                        else:
+                            s.add(Users(id=user_id, name=name))
+                        s.commit()
+
+                        profile = s.query(Profile).filter_by(user_id=user_id).first()
+                        if profile == None:
+                            reply_json.append(createjson.enquete_confirm())
+
+                else:
+                    reply_json.append(createjson.text('売り切れました'))
+            else:
+                reply_json.append(createjson.text("その商品は注文できません。"))
+
+
+
+    elif data_dic['action'] == 'cancelyes':
+        date = data_dic['date']
+        meal_id = data_dic['meal_id']
+        size = data_dic['size']
+
+        orders = s.query(Orders).filter_by(user_id=user_id, date=int(date), meal_id=meal_id, size=size,
+                                           status=1).first()
+        if orders:
+            orders.status = -1
+            s.commit()
+            reply_json.append(createjson.text("キャンセルが完了しました"))
+        else:
+            reply_json.append(createjson.text("キャンセルできませんでした"))
+
+
+    elif data_dic['action'] == 'enquete_agree':
+        profile = s.query(Profile).filter_by(user_id=user_id).first()
+        if profile==None:
+            s.add(Profile(user_id=user_id))
+            s.commit()
+        reply_json.append(createjson.enquete_grade())
+
+    elif data_dic['action'] == 'enquete_grade':
+        value = data_dic['value']
+        profile = s.query(Profile).filter_by(user_id=user_id).first()
+        if profile==None:
+            s.add(Profile(user_id=user_id,grade=value))
+        else:
+            profile.grade=value
+        s.commit()
+        reply_json.append(createjson.enquete_department())
+
+    elif data_dic['action'] == 'enquete_department':
+        value = data_dic['value']
+        profile = s.query(Profile).filter_by(user_id=user_id).first()
+        courselist = settings.department[value]
+        if len(courselist) > 1:
+            if profile == None:
+                s.add(Profile(user_id=user_id, department=value))
+            else:
+                profile.department = value
+            reply_json.append(createjson.enquete_course(courselist))
+        else:
+            course = courselist[0]
+            if profile == None:
+                s.add(Profile(user_id=user_id, department=value,course=course))
+            else:
+                profile.department = value
+                profile.course = course
+            reply_json.append(createjson.text('ご協力ありがとうございました。'))
+        s.commit()
+
+
+    elif data_dic['action'] == 'enquete_course':
+        value = data_dic['value']
+        profile = s.query(Profile).filter_by(user_id=user_id).first()
+        if profile==None:
+            s.add(Profile(user_id=user_id,course=value))
+        else:
+            profile.course=value
+        s.commit()
+        reply_json.append(createjson.text('ご協力ありがとうございました。'))
+
+
+    else:
+        return 0
+
+    data = {'replyToken': event.reply_token, 'messages': reply_json}
+    print(data)
+    res = requests.post(reply_url, data=json.dumps(data), headers=headers)
+    print(res.text)  # for error check

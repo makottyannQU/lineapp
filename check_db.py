@@ -224,3 +224,9 @@ def dateseparate(date):  # date=20190911
 #         ordernum[id]={'s_count':s_count,'m_count':m_count,'l_count':l_count,'s_stock':row.s_stock,'m_stock':row.m_stock,'l_stock':row.l_stock}
 # else:
 #     print('メニューがありません')
+
+query = f'''
+        select * from users;
+        '''
+df = pd.read_sql(query, db_engine)
+print(df)

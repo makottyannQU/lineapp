@@ -22,6 +22,13 @@ def text(t):
     }
     return json
 
+def danger(date):
+    json = {
+        "type": "text",
+        "text": f'※{date2str(date)}のメニューです'
+    }
+    return json
+
 
 def order(info):
     columns = []

@@ -114,9 +114,9 @@ def postback(event):
         else:
             return 0
 
-        date = date.strftime('%Y%m%d')
+        tmpdate = date.strftime('%Y%m%d')
         query = f'''
-                select date from menu where date >= {date} order by date limit 1;
+                select date from menu where date >= {tmpdate} order by date limit 1;
                 '''
         df = pd.read_sql(query, db_engine)
         if len(df) > 0:
@@ -147,6 +147,8 @@ def postback(event):
 
             order_dict = df.to_dict(orient='records')
             reply_json.append(createjson.order(order_dict))
+            if int(tmpdate) != int(date):
+                reply_json.append(createjson.danger(date))
         else:
             reply_json.append(createjson.text("現在、注文できるメニューがありません"))
 

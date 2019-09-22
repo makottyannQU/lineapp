@@ -26,6 +26,7 @@ dictConfig({
             'formatter': 'myformatter',
             'maxBytes': 1024 * 1024,
             'backupCount': 10,
+            "encoding": "utf-8"
         },
     },
     'root': {
@@ -43,7 +44,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = settings.SQLALCHEMY_TRACK_MODIFIC
 app.config['SWAGGER_UI_DOC_EXPANSION'] = settings.SWAGGER_UI_DOC_EXPANSION
 app.config['RESTPLUS_VALIDATE'] = settings.RESTPLUS_VALIDATE
 app.config['UPLOADED_CONTENT_DIR'] = settings.UPLOADED_CONTENT_DIR
-
 
 with app.app_context():
     db.init_app(app)

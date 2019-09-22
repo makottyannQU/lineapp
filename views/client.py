@@ -55,7 +55,7 @@ def notify(message):
     try:
         requests.post(line_notify_api, data=payload, headers=group_headers)
     except:
-        current_app.logger.debug('LINE Notify Error : ' + message)
+        current_app.logger.info('LINE Notify Error : ' + message)
 
 
 @blueprint.route("/callback", methods=['POST'])
@@ -80,7 +80,7 @@ def callback():
 def message_text(event):
     user_id = event.source.user_id
     text = event.message.text
-    current_app.logger.debug(f'user_id:{user_id} text:{text}')
+    current_app.logger.info(f'user_id:{user_id} text:{text}')
 
     if text not in ['はい', 'いいえ']:
         message = '''このアカウントから個別に返信することはできません。
@@ -94,7 +94,7 @@ def postback(event):
     reply_json = []
     data = event.postback.data
     user_id = event.source.user_id
-    # current_app.logger.debug(f'user_id:{user_id} text:{data}')
+    # current_app.logger.info(f'user_id:{user_id} text:{data}')
 
     data_dic = ast.literal_eval(data)
     operation_status = operation()
@@ -365,6 +365,6 @@ def postback(event):
         return 0
 
     data = {'replyToken': event.reply_token, 'messages': reply_json}
-    current_app.logger.debug(str(data))
+    current_app.logger.info(str(reply_json))
     res = requests.post(reply_url, data=json.dumps(data), headers=headers)
     # print(res.text)  # for error check

@@ -94,7 +94,7 @@ def postback(event):
     reply_json = []
     data = event.postback.data
     user_id = event.source.user_id
-    current_app.logger.debug(f'user_id:{user_id} text:{data}')
+    # current_app.logger.debug(f'user_id:{user_id} text:{data}')
 
     data_dic = ast.literal_eval(data)
     operation_status = operation()

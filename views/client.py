@@ -76,17 +76,17 @@ def callback():
     return 'OK'
 
 
-# @handler.add(MessageEvent, message=TextMessage)
-# def message_text(event):
-#     user_id = event.source.user_id
-#     text = event.message.text
-#     current_app.logger.debug(f'user_id:{user_id} text:{text}')
-#
-#     message = '''このアカウントから個別に返信することはできません。
-# 店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
-# http://aaaaaa'''
-#
-#     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+@handler.add(MessageEvent, message=TextMessage)
+def message_text(event):
+    user_id = event.source.user_id
+    text = event.message.text
+    current_app.logger.debug(f'user_id:{user_id} text:{text}')
+
+    if text not in ['はい', 'いいえ']:
+        message = '''このアカウントから個別に返信することはできません。
+店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
+https://line.me/ti/p/AAAA'''
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
 
 
 @handler.add(PostbackEvent)

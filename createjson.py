@@ -99,13 +99,13 @@ def cancel_confirm(cancel_dict):
                     "data": "{'action':'cancelyes', 'date':" + str(cancel_dict['date']) + ", 'meal_id':'" + cancel_dict[
                         'meal_id'] + "', 'size':" + str(cancel_dict['size']) + "}",
                     "label": "はい",
-                    # "text": "はい"
+                    "text": "はい"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'cancelno'}",
                     "label": "いいえ",
-                    # "text": "いいえ"
+                    "text": "いいえ"
                 }
             ],
             "text": f"{date2str(cancel_dict['date'])} の『{cancel_dict['meal_name']}　{size}』をキャンセルしてよろしいですか？"
@@ -147,7 +147,7 @@ def enquete_message():
     json = {
         "type": "text",
         "text": '''まこっちゃん弁当では、お客さまとのコミュニケーション向上を図るため簡単なアンケートを実施しております。
-お答えいただくとクーポンをお送りしますので、ぜひご協力ください！
+ご協力よろしくお願いします。
 
 ※ご入力いただいた情報は九州大学の個人情報保護規約に基づき、厳重に取り扱います。
 https://www.kyushu-u.ac.jp/ja/university/disclosure/privacy/'''
@@ -166,13 +166,13 @@ def enquete_confirm():
                     "type": "postback",
                     "data": "{'action':'enquete_agree'}",
                     "label": "はい",
-                    # "text": "はい"
+                    "text": "はい"
                 },
                 {
                     "type": "postback",
                     "data": "{'action':'enquetea_disagree'}",
                     "label": "いいえ",
-                    # "text": "いいえ"
+                    "text": "いいえ"
                 }
             ],
             "text": f"アンケートに答えますか？"
@@ -231,7 +231,8 @@ def enquete_department():
 
 
 def enquete_course(courselist):
-    courselist.append('その他')
+    if 'その他' not in courselist:
+        courselist.append('その他')
     tmp=[]
     for v in courselist:
         a = {

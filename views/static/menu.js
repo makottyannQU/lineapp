@@ -106,7 +106,7 @@ function changemeal(obj) {
     } else {
         check.append('&emsp;中&emsp;<input type="checkbox" name="check_meal" class="large_checkbox" value="m' + id + '"  disabled="disabled" >&emsp;');
     }
-    if (m_price > 0) {
+    if (l_price > 0) {
         check.append('&emsp;大&emsp;<input type="checkbox" name="check_meal"  class="large_checkbox"value="l' + id + '" checked>');
     } else {
         check.append('&emsp;大&emsp;<input type="checkbox" name="check_meal" class="large_checkbox" value="l' + id + '"  disabled="disabled" >');

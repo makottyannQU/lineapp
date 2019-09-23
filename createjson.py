@@ -36,15 +36,15 @@ def order(info):
         if i['l_stock']>0:
             l_text=f'{i["l_price"]}円'
         else:
-            l_text='売り切れ'
+            l_text='なし'
         if i['m_stock']>0:
             m_text=f'{i["m_price"]}円'
         else:
-            m_text='売り切れ'
+            m_text='なし'
         if i['s_stock']>0:
             s_text=f'{i["s_price"]}円'
         else:
-            s_text='売り切れ'
+            s_text='なし'
         bento_info = {
             "thumbnailImageUrl": i['image_path'],
             "title": i['meal_name'],
@@ -177,12 +177,38 @@ def enquete_confirm():
                 },
                 {
                     "type": "postback",
-                    "data": "{'action':'enquetea_disagree'}",
+                    "data": "{'action':'enquete_disagree'}",
                     "label": "いいえ",
                     "text": "いいえ"
                 }
             ],
             "text": f"アンケートに答えますか？"
+        }
+    }
+    return json
+
+
+def enquete2_confirm():
+    json = {
+        "type": "template",
+        "altText": "アンケート再表示確認",
+        "template": {
+            "type": "confirm",
+            "actions": [
+                {
+                    "type": "postback",
+                    "data": "{'action':'enquete2_agree'}",
+                    "label": "はい",
+                    "text": "はい"
+                },
+                {
+                    "type": "postback",
+                    "data": "{'action':'enquete2_disagree'}",
+                    "label": "いいえ",
+                    "text": "いいえ"
+                }
+            ],
+            "text": f"今後、このアンケートを表示させませんか？"
         }
     }
     return json

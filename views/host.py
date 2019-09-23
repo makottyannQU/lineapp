@@ -168,13 +168,16 @@ def editmenu():
             S_STOCK = request.form['S_stock' + str(i + 1)]
             M_STOCK = request.form['M_stock' + str(i + 1)]
             L_STOCK = request.form['L_stock' + str(i + 1)]
-            count = ordernum[MEAL_ID]
-            if (int(S_STOCK) < count['s_count']):
-                return render_template('index.html', error=1)
-            if (int(M_STOCK) < count['m_count']):
-                return render_template('index.html', error=1)
-            if (int(L_STOCK) < count['l_count']):
-                return render_template('index.html', error=1)
+            try:
+                count = ordernum[MEAL_ID]
+                if (int(S_STOCK) < count['s_count']):
+                    return render_template('index.html', error=1)
+                if (int(M_STOCK) < count['m_count']):
+                    return render_template('index.html', error=1)
+                if (int(L_STOCK) < count['l_count']):
+                    return render_template('index.html', error=1)
+            except:
+                pass
 
             data_for_DB.append(Menu(date=int(
                 date), meal_id=MEAL_ID, s_stock=S_STOCK, m_stock=M_STOCK, l_stock=L_STOCK))

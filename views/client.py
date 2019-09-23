@@ -22,8 +22,7 @@ blueprint = Blueprint('client', __name__, url_prefix='/', static_folder='/views/
                       template_folder='/views/templates')
 
 db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
-Session = sessionmaker(bind=db_engine)
-s = Session()
+
 
 line_bot_api = LineBotApi(settings.access_token)
 handler = WebhookHandler(settings.secret_key)
@@ -85,12 +84,15 @@ def message_text(event):
     if text not in ['はい', 'いいえ']:
         message = '''このアカウントから個別に返信することはできません。
 店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
-https://line.me/ti/p/AAAA'''
+https://line.me/ti/p/lV7_DS7s14'''
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
 
 
 @handler.add(PostbackEvent)
 def postback(event):
+    Session = sessionmaker(bind=db_engine)
+    s = Session()
+
     reply_json = []
     data = event.postback.data
     user_id = event.source.user_id
@@ -256,8 +258,7 @@ def postback(event):
                                 s.add(Users(id=user_id, name=name))
                             s.commit()
 
-                            # profile = s.query(Profile).filter_by(user_id=user_id).first()
-                            profile = None
+                            profile = s.query(Profile).filter_by(user_id=user_id).first()
                             if profile == None:
                                 reply_json.append(createjson.enquete_message())
                                 reply_json.append(createjson.enquete_confirm())
@@ -280,8 +281,7 @@ def postback(event):
                             s.add(Users(id=user_id, name=name))
                         s.commit()
 
-                        # profile = s.query(Profile).filter_by(user_id=user_id).first()
-                        profile = None
+                        profile = s.query(Profile).filter_by(user_id=user_id).first()
                         if profile == None:
                             reply_json.append(createjson.enquete_message())
                             reply_json.append(createjson.enquete_confirm())
@@ -320,6 +320,23 @@ def postback(event):
             s.add(Profile(user_id=user_id))
             s.commit()
         reply_json.append(createjson.enquete_grade())
+
+
+    elif data_dic['action'] == 'enquete_disagree':
+        reply_json.append(createjson.enquete2_confirm())
+
+
+    elif data_dic['action'] == 'enquete2_agree':
+        profile = s.query(Profile).filter_by(user_id=user_id).first()
+        if profile == None:
+            s.add(Profile(user_id=user_id))
+            s.commit()
+        reply_json.append(createjson.text('今後このアンケートは表示しません'))
+
+
+    elif data_dic['action'] == 'enquete2_disagree':
+        reply_json.append(createjson.text('次回注文時に再度アンケートします'))
+
 
     elif data_dic['action'] == 'enquete_grade':
         value = data_dic['value']
@@ -367,6 +384,6 @@ def postback(event):
         return 0
 
     data = {'replyToken': event.reply_token, 'messages': reply_json}
-    current_app.logger.info(str(reply_json))
+    # current_app.logger.info(str(reply_json))
     res = requests.post(reply_url, data=json.dumps(data), headers=headers)
     # print(res.text)  # for error check

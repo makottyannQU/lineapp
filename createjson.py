@@ -138,9 +138,9 @@ def check_order(check_dict):
 def menu_info(menu_dict):
     menu_list = []
     for day in menu_dict:
-        menu_text = date2str(day['date'])
+        menu_text = date2str(day['date'])+'\n'
         for i in day['meals']:
-            menu_text += f'「{i}」 '
+            menu_text += f'「{i}」'
         menu_list.append(menu_text)
 
     json = {

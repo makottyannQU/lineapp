@@ -297,6 +297,8 @@ def enquete_course(courselist):
 def coupon():
     json = {
         "type": "button",
+        "title": "100円引きクーポン",
+        "text": "お支払い時にご利用ください",
         "action": {
             "type": "uri",
             "label": "クーポン",
@@ -304,9 +306,7 @@ def coupon():
             "altUri": {
                 "desktop": settings.coupon_uri
             }
-        },
-        "style": "primary",
-        "color": "#0000ff"
+        }
     }
     return json
 

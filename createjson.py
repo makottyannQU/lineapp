@@ -296,16 +296,19 @@ def enquete_course(courselist):
 
 def coupon():
     json = {
-        "type": "button",
-        "title": "100円引きクーポン",
-        "text": "お支払い時にご利用ください",
-        "action": {
-            "type": "uri",
-            "label": "クーポン",
-            "uri": settings.coupon_uri,
-            "altUri": {
-                "desktop": settings.coupon_uri
-            }
+        "type": "template",
+        "altText": "クーポン",
+        "template": {
+            "type": "buttons",
+            "actions": [
+                {
+                    "type": "uri",
+                    "label": "クーポン",
+                    "uri": settings.coupon_uri,
+                }
+            ],
+            "title": "100円引きクーポン",
+            "text": "お支払い時にご利用ください"
         }
     }
     return json

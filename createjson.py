@@ -296,15 +296,19 @@ def enquete_course(courselist):
 
 def coupon():
     json = {
-        "type": "uri",
-        "label": "クーポン",
-        "uri": settings.coupon_uri,
-        "altUri": {
-            "desktop": settings.coupon_uri
-        }
+        "type": "button",
+        "action": {
+            "type": "uri",
+            "label": "クーポン",
+            "uri": settings.coupon_uri,
+            "altUri": {
+                "desktop": settings.coupon_uri
+            }
+        },
+        "style": "primary",
+        "color": "#0000ff"
     }
     return json
-
 
 
 if __name__ == '__main__':

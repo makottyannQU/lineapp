@@ -1,6 +1,7 @@
 import datetime
 import settings
 
+
 def dateseparate(date):  # date=20190911
     yobi = ["月", "火", "水", "木", "金", "土", "日"]
     date = datetime.datetime.strptime(str(date), '%Y%m%d')
@@ -10,8 +11,9 @@ def dateseparate(date):  # date=20190911
     week = date.weekday()
     return {'year': year, 'month': month, 'day': day, 'week': yobi[week]}
 
+
 def date2str(date):
-    ds=dateseparate(date)
+    ds = dateseparate(date)
     return f'{ds["month"]:2d}月{ds["day"]:2d}日({ds["week"]}) '
 
 
@@ -21,6 +23,7 @@ def text(t):
         "text": t
     }
     return json
+
 
 def danger(date):
     json = {
@@ -33,18 +36,18 @@ def danger(date):
 def order(info):
     columns = []
     for i in info:
-        if i['l_stock']>0:
-            l_text=f'{i["l_price"]}円'
+        if i['l_stock'] > 0:
+            l_text = f'{i["l_price"]}円'
         else:
-            l_text='なし'
-        if i['m_stock']>0:
-            m_text=f'{i["m_price"]}円'
+            l_text = 'なし'
+        if i['m_stock'] > 0:
+            m_text = f'{i["m_price"]}円'
         else:
-            m_text='なし'
-        if i['s_stock']>0:
-            s_text=f'{i["s_price"]}円'
+            m_text = 'なし'
+        if i['s_stock'] > 0:
+            s_text = f'{i["s_price"]}円'
         else:
-            s_text='なし'
+            s_text = 'なし'
         bento_info = {
             "thumbnailImageUrl": i['image_path'],
             "title": i['meal_name'],
@@ -138,7 +141,7 @@ def check_order(check_dict):
 def menu_info(menu_dict):
     menu_list = []
     for day in menu_dict:
-        menu_text = date2str(day['date'])+'\n'
+        menu_text = date2str(day['date']) + '\n'
         for i in day['meals']:
             menu_text += f'「{i}」'
         menu_list.append(menu_text)
@@ -154,7 +157,7 @@ def enquete_message():
     json = {
         "type": "text",
         "text": '''まこっちゃん弁当では、お客さまとのコミュニケーション向上を図るため簡単なアンケートを実施しております。
-ご協力よろしくお願いします。
+回答していただくと、まこっちゃん弁当100円引きクーポンをプレゼントします！
 
 ※ご入力いただいた情報は九州大学の個人情報保護規約に基づき、厳重に取り扱います。
 https://www.kyushu-u.ac.jp/ja/university/disclosure/privacy/'''
@@ -213,9 +216,10 @@ def enquete2_confirm():
     }
     return json
 
+
 def enquete_grade():
-    tmp=[]
-    for k,v in settings.grade.items():
+    tmp = []
+    for k, v in settings.grade.items():
         a = {
             "type": "action",
             "action": {
@@ -239,8 +243,8 @@ def enquete_grade():
 
 
 def enquete_department():
-    tmp=[]
-    for k,v in settings.department.items():
+    tmp = []
+    for k, v in settings.department.items():
         a = {
             "type": "action",
             "action": {
@@ -266,7 +270,7 @@ def enquete_department():
 def enquete_course(courselist):
     if 'その他' not in courselist:
         courselist.append('その他')
-    tmp=[]
+    tmp = []
     for v in courselist:
         a = {
             "type": "action",
@@ -288,6 +292,19 @@ def enquete_course(courselist):
     }
 
     return json
+
+
+def coupon():
+    json = {
+        "type": "uri",
+        "label": "クーポン",
+        "uri": settings.coupon_uri,
+        "altUri": {
+            "desktop": settings.coupon_uri
+        }
+    }
+    return json
+
 
 
 if __name__ == '__main__':

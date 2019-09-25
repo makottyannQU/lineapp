@@ -82,9 +82,7 @@ def message_text(event):
     current_app.logger.info(f'user_id:{user_id} text:{text}')
 
     if text not in ['はい', 'いいえ']:
-        message = '''このアカウントから個別に返信することはできません。
-店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
-https://line.me/ti/p/lV7_DS7s14'''
+        message = settings.temp_message
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
 
 
@@ -366,6 +364,7 @@ def postback(event):
                 profile.department = value
                 profile.course = course
             reply_json.append(createjson.text('ご協力ありがとうございました!'))
+            reply_json.append(createjson.coupon())
         s.commit()
 
 
@@ -378,6 +377,7 @@ def postback(event):
             profile.course = value
         s.commit()
         reply_json.append(createjson.text('ご協力ありがとうございました!'))
+        reply_json.append(createjson.coupon())
 
 
     else:

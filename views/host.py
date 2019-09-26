@@ -334,6 +334,7 @@ def ordercheck():
         for meal_name, meal_group in meal_grouped:
             num = 0
             num2 = 0
+            meal_group = meal_group.sort_values('size')
             size_grouped = meal_group.groupby('size', sort=False)
             tmp = []
             for size, size_group in size_grouped:

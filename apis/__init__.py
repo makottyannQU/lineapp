@@ -4,7 +4,7 @@ from flask_restplus import Api
 
 from .order import namespace as order_namespace
 
-blueprint = Blueprint('api', __name__, url_prefix='/')
+blueprint = Blueprint('api', __name__)
 
 api = Api(
     app=blueprint,

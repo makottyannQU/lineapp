@@ -1,10 +1,8 @@
-from flask import abort, session
-from flask_restplus import Namespace, fields, Resource
+from flask_restplus import Namespace, Resource
 from sqlalchemy import create_engine
 import pandas as pd
 
 import settings
-from models import db, Orders,Meal
 
 db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
 
@@ -12,7 +10,6 @@ namespace = Namespace('order', description='注文関連のエンドポイント
 
 @namespace.route('/<int:date>/<string:user_id>')
 class OrderController(Resource):
-    # @namespace.marshal_with(order_spec)
     def get(self, date, user_id):
         users=user_id.split('&')
         query = f'''

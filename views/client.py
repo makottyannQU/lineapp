@@ -23,11 +23,10 @@ blueprint = Blueprint('client', __name__, url_prefix='/', static_folder='/views/
 
 db_engine = create_engine(settings.db_uri, pool_pre_ping=True)
 
-
 line_bot_api = LineBotApi(settings.access_token)
 handler = WebhookHandler(settings.secret_key)
 
-size_list = ['小', '中', '大']
+size_list = ['小盛', '並盛', '大盛']
 
 #  http postする時のヘッダー
 headers = {
@@ -128,6 +127,8 @@ def postback(event):
                     '''
             df = pd.read_sql(query, db_engine)
             df['image_path'] = img_url + df['image_path']
+            size_flag = [sum(df['s_price'] * df['s_stock']) > 0, sum(df['m_price'] * df['m_stock']) > 0,
+                         sum(df['l_price'] * df['l_stock']) > 0]
 
             query = f'''
                     select orders.meal_id, orders.size, sum(count) as count from ( select meal_id, size, count from orders
@@ -146,7 +147,7 @@ def postback(event):
                 df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id'] == row['meal_id']][tmp] - row['count']
 
             order_dict = df.to_dict(orient='records')
-            reply_json.append(createjson.order(order_dict))
+            reply_json.append(createjson.order(order_dict,size_flag))
             if int(tmpdate) != int(date):
                 reply_json.append(createjson.danger(date))
         else:
@@ -387,3 +388,4 @@ def postback(event):
     # current_app.logger.info(str(reply_json))
     res = requests.post(reply_url, data=json.dumps(data), headers=headers)
     # print(res.text)  # for error check
+    # s.close()

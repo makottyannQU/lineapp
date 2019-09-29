@@ -19,7 +19,8 @@ class Users(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.String(37), nullable=False, primary_key=True)
     name = db.Column(db.Text, nullable=False)
-    status=db.Column(db.Integer, nullable=False, default=1)
+    status = db.Column(db.Integer, nullable=False, default=1)
+
 
 class Profile(db.Model):
     __tablename__ = 'profile'
@@ -30,15 +31,16 @@ class Profile(db.Model):
     course = db.Column(db.Text, nullable=True)
     club = db.Column(db.Text, nullable=True)
 
+
 class Orders(db.Model):
     __tablename__ = 'orders'
     user_id = db.Column(db.String(37), nullable=False, primary_key=True)
     date = db.Column(db.Integer, nullable=False, primary_key=True)
-    meal_id=db.Column(db.String(37), nullable=False,primary_key=True)
-    status=db.Column(db.Integer, nullable=False, default=1)
-    size=db.Column(db.Integer, nullable=False, default=1)
-    count=db.Column(db.Integer, nullable=False, default=1)
-    timestamp=db.Column(db.Integer, nullable=False, default=now())
+    meal_id = db.Column(db.String(37), nullable=False, primary_key=True)
+    status = db.Column(db.Integer, nullable=False, default=1)
+    size = db.Column(db.Integer, nullable=False, default=1)
+    count = db.Column(db.Integer, nullable=False, default=1)
+    timestamp = db.Column(db.Integer, nullable=False, default=now())
 
 
 class Meal(db.Model):
@@ -46,16 +48,16 @@ class Meal(db.Model):
     id = db.Column(db.String(37), nullable=False, primary_key=True)
     name = db.Column(db.Text, nullable=False)
     image = db.Column(db.Text, nullable=True)
-    s_price=db.Column(db.Integer, nullable=True)
-    m_price=db.Column(db.Integer, nullable=True)
-    l_price=db.Column(db.Integer, nullable=True)
+    s_price = db.Column(db.Integer, nullable=False, default=0)
+    m_price = db.Column(db.Integer, nullable=False, default=300)
+    l_price = db.Column(db.Integer, nullable=False, default=400)
 
 
 class Menu(db.Model):
     __tablename__ = 'menu'
     date = db.Column(db.Integer, nullable=False, primary_key=True)
     meal_id = db.Column(db.String(37), nullable=False, primary_key=True)
-    s_stock=db.Column(db.Integer, nullable=True)
-    m_stock=db.Column(db.Integer, nullable=True)
-    l_stock=db.Column(db.Integer, nullable=True)
-    timestamp=db.Column(db.Integer, nullable=False, default=now())
+    s_stock = db.Column(db.Integer, nullable=False, default=0)
+    m_stock = db.Column(db.Integer, nullable=False, default=100)
+    l_stock = db.Column(db.Integer, nullable=False, default=100)
+    timestamp = db.Column(db.Integer, nullable=False, default=now())

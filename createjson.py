@@ -33,7 +33,7 @@ def danger(date):
     return json
 
 
-def order(info):
+def order(info, size_flag):
     columns = []
     for i in info:
         if i['l_stock'] > 0:
@@ -48,34 +48,36 @@ def order(info):
             s_text = f'{i["s_price"]}円'
         else:
             s_text = 'なし'
+        tmp = []
+        if size_flag[2]:
+            tmp.append({
+                "type": "postback",
+                "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 2,'date':" + str(
+                    i['date']) + "}",
+                "label": f"大盛 {l_text}",
+                # "text": f"『{i['meal_name']}』を注文しました。"
+            })
+        if size_flag[1]:
+            tmp.append({
+                "type": "postback",
+                "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 1,'date':" + str(
+                    i['date']) + "}",
+                "label": f"並盛 {m_text}",
+                # "text": f"『{i['meal_name']}』を注文しました。"
+            })
+        if size_flag[0]:
+            tmp.append({
+                "type": "postback",
+                "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 0,'date':" + str(
+                    i['date']) + "}",
+                "label": f"小盛 {s_text}",
+                # "text": f"『{i['meal_name']}』を注文しました。"
+            })
         bento_info = {
             "thumbnailImageUrl": i['image_path'],
             "title": i['meal_name'],
             "text": date2str(i['date']),
-            "actions": [
-                {
-                    "type": "postback",
-                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 2,'date':" + str(
-                        i['date']) + "}",
-                    "label": f"大 {l_text}",
-                    # "text": f"『{i['meal_name']}』を注文しました。"
-                },
-                {
-                    "type": "postback",
-                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 1,'date':" + str(
-                        i['date']) + "}",
-                    "label": f"中 {m_text}",
-                    # "text": f"『{i['meal_name']}』を注文しました。"
-                },
-                {
-                    "type": "postback",
-                    "data": "{'action':'order', 'meal_id':'" + i['meal_id'] + "','size': 0,'date':" + str(
-                        i['date']) + "}",
-                    "label": f"小 {s_text}",
-                    # "text": f"『{i['meal_name']}』を注文しました。"
-                }
-
-            ]
+            "actions": tmp
         }
         columns.append(bento_info)
 
@@ -93,11 +95,11 @@ def order(info):
 
 def cancel_confirm(cancel_dict):
     if cancel_dict['size'] == 0:
-        size = "小"
+        size = "小盛"
     elif cancel_dict['size'] == 1:
-        size = "中"
+        size = "並盛"
     elif cancel_dict['size'] == 2:
-        size = "大"
+        size = "大盛"
     json = {
         "type": "template",
         "altText": "キャンセル確認",
@@ -126,11 +128,11 @@ def cancel_confirm(cancel_dict):
 
 def check_order(check_dict):
     if check_dict['size'] == 0:
-        size = "小"
+        size = "小盛"
     elif check_dict['size'] == 1:
-        size = "中"
+        size = "並盛"
     elif check_dict['size'] == 2:
-        size = "大"
+        size = "大盛"
     json = {
         "type": "text",
         "text": f"{date2str(check_dict['date'])} 『{check_dict['meal_name']} {size}』の注文があります。"

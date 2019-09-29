@@ -204,6 +204,7 @@ def member():
             left outer join profile on orders.user_id = profile.user_id order by date desc;
             '''
     df = pd.read_sql(query, db_engine)
+    df['grade']=df['grade'].fillna(-1).astype(int).replace(-1, 'None')
     profile = df.to_dict(orient='records')
     return render_template('member.html', profile=profile)
 
@@ -317,7 +318,7 @@ def addmeal():
 @blueprint.route('/ordercheck')
 def ordercheck():
     col_max = 10
-    size_list = ['小', '中', '大']
+    size_list = ['小盛', '並盛', '大盛']
     query = f'''
             select s1.date, meal.name as meal_name, s1.size, users.name as user_name from (select * from orders where status = 1) as s1 inner join
             ( select max(date) as date from orders where status = 1 ) as s2 on s1.date = s2.date

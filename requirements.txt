@@ -1,5 +1,7 @@
 gunicorn==19.9.0
 
+aniso8601==8.0.0
+attrs==19.1.0
 certifi==2019.6.16
 chardet==3.0.4
 Click==7.0
@@ -10,11 +12,15 @@ future==0.17.1
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10.1
+jpholiday==0.0.6
+jsonschema==3.0.2
 line-bot-sdk==1.12.1
 MarkupSafe==1.0
 numpy==1.17.0
 pandas==0.25.0
-psycopg2==2.8.3
+# psycopg2==2.8.3
+PyMySQL==0.9.3
+pyrsistent==0.15.4
 python-dateutil==2.8.0
 pytz==2019.2
 requests==2.22.0

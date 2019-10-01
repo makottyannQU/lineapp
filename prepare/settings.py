@@ -5,11 +5,19 @@ import datetime
 access_token='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 secret_key='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 img_url = 'https://aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+coupon_uri = 'http://lin.ee/aaaaaaaaa'
+temp_message = '''このアカウントから個別に返信することはできません。
+店主に御用の場合は下記LINEアカウント(まこっちゃん弁当店主)にご連絡ください。
+https://line.me/ti/p/aaaaaaaaaaaa'''
+
+# LINE notify
+my_token='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+notify_token='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 
 # richmenu
-withcancel_richmenu_id = "richmenu-94696c816d15e60310442d3091f3d83e"
-withoutcancel_richmenu_id = "richmenu-aeba8b140b55dbe3f9b99554e71bfc02"
-none_richmenu_id = "richmenu-16e6e2e65f078bc7cb265ec3f67a90be"
+withcancel_richmenu_id = "richmenu-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+withoutcancel_richmenu_id = "richmenu-aaaaaaaaaaaaaaaaaaaaaaaaaa"
+none_richmenu_id = "richmenu-aaaaaaaaaaaaaaaaaaaaaaaa"
 
 #DB
 db_info = {
@@ -25,7 +33,7 @@ db_uri = 'postgres://{user}:{password}@{host}/{database}'.format(**db_info)  # f
 # makottyann
 operationtime = [[datetime.time(7, 0), 'non'],
                  [datetime.time(11, 40), 'am'],
-                 [datetime.time(13, 0), 'non'],
+                 [datetime.time(12, 30), 'non'],
                  [datetime.time(21, 0), 'pm']]
 
 # department

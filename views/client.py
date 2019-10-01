@@ -127,8 +127,7 @@ def postback(event):
                     '''
             df = pd.read_sql(query, db_engine)
             df['image_path'] = img_url + df['image_path']
-            size_flag = [sum(df['s_price'] * df['s_stock']) > 0, sum(df['m_price'] * df['m_stock']) > 0,
-                         sum(df['l_price'] * df['l_stock']) > 0]
+            size_flag = [sum(df['s_price']) > 0, sum(df['m_price']) > 0, sum(df['l_price']) > 0]
 
             query = f'''
                     select orders.meal_id, orders.size, sum(count) as count from ( select meal_id, size, count from orders
@@ -147,7 +146,7 @@ def postback(event):
                 df.loc[df['meal_id'] == row['meal_id'], tmp] = df[df['meal_id'] == row['meal_id']][tmp] - row['count']
 
             order_dict = df.to_dict(orient='records')
-            reply_json.append(createjson.order(order_dict,size_flag))
+            reply_json.append(createjson.order(order_dict, size_flag))
             if int(tmpdate) != int(date):
                 reply_json.append(createjson.danger(date))
         else:

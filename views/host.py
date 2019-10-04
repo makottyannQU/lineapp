@@ -336,6 +336,8 @@ def ordercheck():
         date = date[0:4] + '年' + date[4:6] + '月' + date[6:8] + '日'
         ordercheck_dict = []
         for index, row in meals.iterrows():
+            if row['s_stock'] + row['m_stock'] + row['l_stock'] < 1:
+                continue
             meal_group = df[df['meal_id'] == row['meal_id']]
             num = 0
             num2 = 0

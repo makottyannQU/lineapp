@@ -1,125 +1,25 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class=" main" style=" margin-top: 70px;">
-        <div class="login-box col-md-12">
-            {#        <section class="section">#}
-            {#            <div class="section__block section__block--scoped">#}
-            {#                <h3>注文確認 {{ date }}</h3>#}
-            {#                <fieldset class="fieldset fieldset--demo">#}
-            {#                    <div class="fieldset__wrapper">#}
-            {#                        <input onchange ="change_url_palam()"id="_pickadate" class="fieldset__input js__datepicker" type="text" placeholder="Try me&hellip;">#}
-            {#                    </div>#}
-            {#                </fieldset>#}
-            {#            </div>#}
-            {#        </section>#}
-
-
-            <h3 id="date" style="margin-top: 2px">{{ date }}</h3>
-            <table class="table table-bordered" style="background-color: white">
-                <tbody>
-                {#                <tr>#}
-                {#                    <th>弁当</th>#}
-                {#                    <th>サイズ</th>#}
-                {#                    <th colspan="10">名前</th>#}
-                {#                </tr>#}
-                {% for row1 in orders %}
-                    <tr>
-                        <td width="100px" rowspan="{{ row1['span'] }}">{{ row1['meal_name'] }}({{ row1['num'] }})</td>
-                        {% for row2 in row1['each_size'] %}
-                            <td width="50px" rowspan="{{ row2['span'] }}"
-                                style="border-right-width: 3px">{{ row2['size'] }}({{ row2['num'] }})
-                            </td>
-                            {% for row3 in row2['member'] %}
-                                {% for name in row3 %}
-                                    <td>{{ name }}</td>
-                                {% endfor %}
-                                </tr>
-                                <tr>
+    <div class="main" class="table-responsive">
+        <table class="ordertable table table-bordered">
+            <caption>{{ date }}</caption>
+            <tbody>
+            {% for row1 in orders %}
+                <tr>
+                    <td style="width: 7%; font-weight: 900; padding: 4px" rowspan="{{ row1['span'] }}">{{ row1['meal_name'] }}({{ row1['num'] }})</td>
+                    {% for row2 in row1['each_size'] %}
+                        <td rowspan="{{ row2['span'] }}" style="border-right-width: 3px; width: 3%; font-weight: 900; padding: 4px">{{ row2['size'] }}({{ row2['num'] }})</td>
+                        {% for row3 in row2['member'] %}
+                            {% for name in row3 %}
+                                <td style="padding: 4px">{{ name }}</td>
                             {% endfor %}
+                            </tr>
+                            <tr>
                         {% endfor %}
-                        </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-            {#        {% for x in ordered_menu %}#}
-            {#        <table class="table table-bordered">#}
-            {#            <h1>{{ ordered_menu_name_dict[x] }}</h1>#}
-            {#            <thead>#}
-            {#                <tr class="warning">#}
-            {#                    <th>小</th>#}
-            {#                    <th></th>#}
-            {#                    <th></th>#}
-            {#                </tr>#}
-            {#                    {% for y in users_devide_menu_size[x][0] %}#}
-            {#                    {% if loop.index % 4 == 0 %}#}
-            {#                    <tr  class="table-info">#}
-            {#                        <td>{{ y}}</td>#}
-            {#                        {% elif loop.index % 4 == 3 %}#}
-            {#                        <td>{{ y }}</td>#}
-            {#                    </tr>#}
-            {#                    {% else %}#}
-            {#                    <td>{{ y }}</td>#}
-            {#                    {% endif %}#}
-            {#                    {% endfor %}#}
-            {#            </thead>#}
-            {#            <tbody>#}
-            {#           #}
-            {#            </tbody>#}
-            {#                <thead>#}
-            {#                    <tr class="warning">#}
-            {#                        <th>中</th>#}
-            {#                        <th></th>#}
-            {#                        <th></th>#}
-            {#                    </tr>#}
-            {#                </thead>#}
-            {#                <tbody>#}
-            {#                    {% for y in users_devide_menu_size[x][1] %}#}
-            {#                    {% if loop.index % 4 == 0 %}#}
-            {#                    <tr class="success">#}
-            {#                        <td>{{ y}}</td>#}
-            {#                    {% elif loop.index % 4 == 3 %}#}
-            {#                        <td>{{ y }}</td>#}
-            {#                    </tr>#}
-            {#                    {% else %}#}
-            {#                    <td>{{ y }}</td>#}
-            {#                    {% endif %}#}
-            {#                    {% endfor %}#}
-            {#                #}
-            {#                </tbody>#}
-            {#                    <thead>#}
-            {#                        <tr class="warning">#}
-            {#                            <th>大</th>#}
-            {#                            <th></th>#}
-            {#                            <th></th>#}
-            {#                        </tr>#}
-            {#                    </thead>#}
-            {#                    <tbody>#}
-            {#                    {% for y in users_devide_menu_size[x][2] %}#}
-            {#                    {% if loop.index % 4 == 0 %}#}
-            {#                    <tr class="success">#}
-            {#                        <td>{{ y}}</td>#}
-            {#                        {% elif loop.index % 4 == 3 %}#}
-            {#                        <td>{{ y }}</td>#}
-            {#                    </tr>#}
-            {#                    {% else %}#}
-            {#                    <td>{{ y }}</td>#}
-            {#                    {% endif %}#}
-            {#                    {% endfor %}#}
-            {#                    </tbody>#}
-            {#        </table>#}
-            {#        {% endfor %}#}
-        </div>
+                    {% endfor %}
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-    {#<script type="text/javascript">#}
-    {#    $(function () {#}
-    {#        $('#_pickadate').pickadate();#}
-    {#    });#}
-    {#    function change_url_palam(){#}
-    {#        let date = $('#_pickadate').val();#}
-    {#        date = date.replace("月","");#}
-    {#        date = date.replace("年","");#}
-    {#        date = date.replace("日","");#}
-    {#        location.href = "/ordercheck?date="+date;#}
-    {#    }#}
-    {#</script>#}
 {% endblock %}

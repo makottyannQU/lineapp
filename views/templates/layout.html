@@ -7,59 +7,75 @@
     <title>まこっちゃん弁当</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" ;; rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./static/style.css">
+    <link rel="stylesheet" type="text/css" href="./static/print.css" media="print">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
     <!-- datepicker -->
-{#    <link rel="stylesheet" href="./static/pickadate/default.css">#}
-{#    <link rel="stylesheet" href="./static/pickadate/default.date.css">#}
-{#    <script src="./static/pickadate/picker.js"></script>#}
-{#    <script src="./static/pickadate/picker.date.js"></script>#}
-{#    <script src="./static/pickadate/legacy.js"></script>#}
-{#    <script src="./static/pickadate/lang-ja.js"></script>#}
+    {#    <link rel="stylesheet" href="./static/pickadate/default.css">#}
+    {#    <link rel="stylesheet" href="./static/pickadate/default.date.css">#}
+    {#    <script src="./static/pickadate/picker.js"></script>#}
+    {#    <script src="./static/pickadate/picker.date.js"></script>#}
+    {#    <script src="./static/pickadate/legacy.js"></script>#}
+    {#    <script src="./static/pickadate/lang-ja.js"></script>#}
 
     <style>
         input.large_checkbox {
             transform: scale(2);
             margin-left: 10px;
         }
+
+        .ordertable {
+            background-color: white;
+            border-collapse: collapse;
+            border: 1px solid #666;
+            width: max-content;
+        }
+
+        .ordertable td {
+            border: 1px solid #666;
+            padding: 0.5em;
+            width: 9%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Topbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#togglebar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./">まこっちゃん弁当</a>
-            </div>
-            <div class="collapse navbar-collapse" id="togglebar">
-                <ul class="nav navbar-nav navbar-right">
-                    <a href="./member">
-                        <button type="button" class="btn btn-default navbar-btn">メンバー</button>
-                    </a>
-                    <a href="./meal">
-                        <button type="button" class="btn btn-default navbar-btn">弁当登録</button>
-                    </a>
-                    <a href="./ordercheck">
-                        <button type="button" class="btn btn-default navbar-btn">注文確認</button>
-                    </a>
-                    <!-- デバック時使用 -->
-{#                    <a href="./look_in_DB">#}
-{#                        <button type="button" class="btn btn-default navbar-btn">DB確認</button>#}
-{#                    </a>#}
-                    
-                </ul>
-            </div>
+<!-- Topbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#togglebar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">まこっちゃん弁当</a>
         </div>
-    </nav>
-    {% block content %}{% endblock %}
+        <div class="collapse navbar-collapse" id="togglebar">
+            <ul class="nav navbar-nav navbar-right">
+                <a href="./member">
+                    <button type="button" class="btn btn-default navbar-btn">メンバー</button>
+                </a>
+                <a href="./meal">
+                    <button type="button" class="btn btn-default navbar-btn">弁当登録</button>
+                </a>
+                <a href="./ordercheck">
+                    <button type="button" class="btn btn-default navbar-btn">注文確認</button>
+                </a>
+                <!-- デバック時使用 -->
+                {#                    <a href="./look_in_DB">#}
+                {#                        <button type="button" class="btn btn-default navbar-btn">DB確認</button>#}
+                {#                    </a>#}
+
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block content %}{% endblock %}
 </body>
 
 </html>

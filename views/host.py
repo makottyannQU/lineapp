@@ -204,7 +204,7 @@ def member():
             left outer join profile on orders.user_id = profile.user_id order by date desc;
             '''
     df = pd.read_sql(query, db_engine)
-    df['grade']=df['grade'].fillna(-1).astype(int).replace(-1, 'None')
+    df['grade'] = df['grade'].fillna(-1).astype(int).replace(-1, 'None')
     profile = df.to_dict(orient='records')
     return render_template('member.html', profile=profile)
 
@@ -319,36 +319,45 @@ def addmeal():
 def ordercheck():
     col_max = 10
     size_list = ['小盛', '並盛', '大盛']
+    size_stock = ['s_stock', 'm_stock', 'l_stock']
     query = f'''
-            select s1.date, meal.name as meal_name, s1.size, users.name as user_name from (select * from orders where status = 1) as s1 inner join
-            ( select max(date) as date from orders where status = 1 ) as s2 on s1.date = s2.date
-            inner join users on s1.user_id = users.id inner join meal on s1.meal_id = meal.id order by s1.timestamp;
+            select s1.date, s1.meal_id, s1.size, users.name as user_name from (select * from orders where status != -1) as s1 inner join
+            ( select max(date) as date from orders where status != -1 ) as s2 on s1.date = s2.date
+            inner join users on s1.user_id = users.id order by s1.timestamp;
             '''
     df = pd.read_sql(query, db_engine)
     if len(df) == 0:
         return render_template('no_order_view.html')
     else:
         date = str(df.date[0])
+        query = f'select * from (select * from menu where date = {date}) as menu inner join meal on menu.meal_id = meal.id'
+        meals = pd.read_sql(query, db_engine)
+
         date = date[0:4] + '年' + date[4:6] + '月' + date[6:8] + '日'
         ordercheck_dict = []
-        meal_grouped = df.groupby('meal_name', sort=False)
-        for meal_name, meal_group in meal_grouped:
+        for index, row in meals.iterrows():
+            meal_group = df[df['meal_id'] == row['meal_id']]
             num = 0
             num2 = 0
-            meal_group = meal_group.sort_values('size')
-            size_grouped = meal_group.groupby('size', sort=False)
             tmp = []
-            for size, size_group in size_grouped:
+            for size in range(3):
+                stock = row[size_stock[size]]
+                if stock < 1:
+                    continue
+                size_group = meal_group[meal_group['size'] == size]
                 l = size_group.user_name.to_list()
+                ordernum = len(l)
+                for i in range(stock - ordernum):
+                    l.append(' ')
                 tmp2 = []
                 for i in range(0, len(l), col_max):
                     tmp2.append(l[i:i + col_max])
                 for i in range(col_max - len(tmp2[-1])):
-                    tmp2[-1].append('')
-                num += len(l)
+                    tmp2[-1].append(' ')
+                num += ordernum
                 num2 += len(tmp2)
-                tmp.append({'size': size_list[size], 'num': len(l), 'span': len(tmp2), 'member': tmp2})
-            ordercheck_dict.append({'meal_name': meal_name, 'num': num, 'span': num2, 'each_size': tmp})
+                tmp.append({'size': size_list[size], 'num': ordernum, 'span': len(tmp2), 'member': tmp2})
+            ordercheck_dict.append({'meal_name': row['name'], 'num': num, 'span': num2, 'each_size': tmp})
     return render_template('ordercheck.html', date=date, orders=ordercheck_dict)
 
 

@@ -3,6 +3,7 @@ from flask import Blueprint
 from flask_restplus import Api
 
 from .order import namespace as order_namespace
+from .menu import namespace as menu_namespace
 
 blueprint = Blueprint('api', __name__)
 
@@ -15,3 +16,4 @@ api = Api(
 )
 
 api.add_namespace(order_namespace)
+api.add_namespace(menu_namespace)

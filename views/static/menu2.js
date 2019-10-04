@@ -97,14 +97,14 @@ function changemeal(obj) {
         }
     }
     if (s_price > 0) {
-        check.append('&emsp;小盛<input type="checkbox" name="check_meal" class="large_checkbox" value="s' + id + '" checked>&emsp;');
+        check.append('&emsp;小盛<input type="checkbox" name="check_meal" class="large_checkbox" value="s' + id + '" checked>');
     } else {
-        check.append('&emsp;小盛<input type="checkbox" name="check_meal" class="large_checkbox" value="s' + id + '"  disabled="disabled" >&emsp;');
+        check.append('&emsp;小盛<input type="checkbox" name="check_meal" class="large_checkbox" value="s' + id + '"  disabled="disabled" >');
     }
     if (m_price > 0) {
-        check.append('&emsp;並盛<input type="checkbox" name="check_meal" class="large_checkbox" value="m' + id + '" checked>&emsp;');
+        check.append('&emsp;並盛<input type="checkbox" name="check_meal" class="large_checkbox" value="m' + id + '" checked>');
     } else {
-        check.append('&emsp;並盛<input type="checkbox" name="check_meal" class="large_checkbox" value="m' + id + '"  disabled="disabled" >&emsp;');
+        check.append('&emsp;並盛<input type="checkbox" name="check_meal" class="large_checkbox" value="m' + id + '"  disabled="disabled" >');
     }
     if (l_price > 0) {
         check.append('&emsp;大盛<input type="checkbox" name="check_meal"  class="large_checkbox"value="l' + id + '" checked>');

@@ -65,7 +65,7 @@ var plus_meal = function () {
     count += 1
 
     // 新しいtr要素を生成
-    var tr_new = '<td id="meal_td' + (count) + '" class="meal_td" style="padding-right: 10px;"><select class="form-control" name="meal" id="meal' + (count) + '" onChange="changemeal(this);"><option value="">未選択</option></select></td><td id="check_meal' + (count) + '"></td>';
+    var tr_new = '<td id="meal_td' + (count) + '" class="meal_td" style="padding-right: 10px; width: 30%;"><select class="form-control" name="meal" id="meal' + (count) + '" onChange="changemeal(this);"><option value="">未選択</option></select></td><td id="check_meal' + (count) + '"></td>';
 
     document.getElementById('meal_tr' + (count)).innerHTML = tr_new;
 

@@ -243,6 +243,7 @@ def postback(event):
                             order.meal_id = meal_id
                             order.size = size
                             order.status = 1
+                            order.timestamp = int(now.timestamp())
                             s.commit()
                             reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
 
@@ -264,7 +265,7 @@ def postback(event):
                             meal = s.query(Meal).filter_by(id=meal_id).first()
                             notify(f'{name}が『{meal.name} {size_list[size]}』を注文しました')
                     else:
-                        order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size)
+                        order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size, timestamp=int(now.timestamp()))
                         s.add(order)
                         s.commit()
                         reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
@@ -302,6 +303,7 @@ def postback(event):
                                            status=1).first()
         if orders:
             orders.status = -1
+            orders.timestamp = int(now.timestamp())
             s.commit()
             reply_json.append(createjson.text("キャンセルが完了しました"))
 

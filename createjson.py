@@ -159,7 +159,7 @@ def enquete_message():
     json = {
         "type": "text",
         "text": '''まこっちゃん弁当では、お客さまとのコミュニケーション向上を図るため簡単なアンケートを実施しております。
-回答していただくと、まこっちゃん弁当100円引きクーポンをプレゼントします！
+回答していただくと、まこっちゃん弁当0円引きクーポンをプレゼントします！
 
 ※ご入力いただいた情報は九州大学の個人情報保護規約に基づき、厳重に取り扱います。
 https://www.kyushu-u.ac.jp/ja/university/disclosure/privacy/'''
@@ -309,8 +309,8 @@ def coupon():
                     "uri": settings.coupon_uri,
                 }
             ],
-            "title": "100円引きクーポン",
-            "text": "お支払い時にご利用ください"
+            "title": "0円引きクーポン",
+            "text": "お支払い時にご利用できません"
         }
     }
     return json

@@ -245,7 +245,7 @@ def postback(event):
                             order.status = 1
                             order.timestamp = int(now.timestamp())
                             s.commit()
-                            reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
+                            reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しましたが、この注文は無効です'))
 
                             users = s.query(Users).filter_by(id=user_id, status=1).first()
                             name = line_bot_api.get_profile(user_id).display_name
@@ -268,7 +268,7 @@ def postback(event):
                         order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size, timestamp=int(now.timestamp()))
                         s.add(order)
                         s.commit()
-                        reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しました'))
+                        reply_json.append(createjson.text('ありがとうございます(^o^)\n注文が完了しましたが、この注文は無効です'))
 
                         users = s.query(Users).filter_by(id=user_id, status=1).first()
                         name = line_bot_api.get_profile(user_id).display_name

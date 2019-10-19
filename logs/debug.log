@@ -1,0 +1,890 @@
+2019-10-01 15:53:39,317     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-01 15:53:39,647     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:39] "GET / HTTP/1.1" 200 -
+2019-10-01 15:53:39,830     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:39] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-01 15:53:40,210     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:40] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-01 15:53:40,214     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:40] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-01 15:53:40,265     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:40] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-01 15:53:46,489     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:46] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-01 15:53:48,329     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:48] "GET /get_meals HTTP/1.1" 200 -
+2019-10-01 15:53:48,470     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:48] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-01 15:53:54,331     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:53:54] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-01 15:54:30,713     INFO _internal.py:L122: 127.0.0.1 - - [01/Oct/2019 15:54:30] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 12:49:33,140     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 12:50:17,660     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:17] "GET / HTTP/1.1" 200 -
+2019-10-04 12:50:17,822     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:17] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 12:50:17,899     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:17] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 12:50:18,114     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:18] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 12:50:18,140     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:18] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 12:50:24,662     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:24] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 12:50:26,190     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:26] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 12:50:26,559     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:26] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-04 12:50:35,214     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:35] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 12:50:40,562     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:50:40] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 12:51:11,708     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:51:11] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 12:51:17,263     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:51:17] "GET / HTTP/1.1" 200 -
+2019-10-04 12:51:20,393     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:51:20] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 12:51:21,956     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:51:21] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 12:51:29,073     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 12:51:29] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 13:02:08,716     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 13:02:08] "GET /member HTTP/1.1" 200 -
+2019-10-04 13:02:28,759     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 13:02:28] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 13:03:35,008     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 13:03:35] "GET /member HTTP/1.1" 200 -
+2019-10-04 13:03:35,067     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 13:03:35] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:27:44,932     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:27:52,541     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:27:52] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:35:02,034     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:35:08,334     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:35:08] "GET / HTTP/1.1" 200 -
+2019-10-04 14:35:18,069     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:35:18] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 14:35:20,454     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:35:20] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 14:35:23,996     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:35:23] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:37:33,616     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:33] "GET / HTTP/1.1" 200 -
+2019-10-04 14:37:33,709     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:33] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:37:33,893     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:33] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 14:37:34,041     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:34] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 14:37:34,052     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:34] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 14:37:39,199     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:39] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 14:37:41,639     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:41] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:37:41,696     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:37:41] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:39:58,054     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:39:58] "GET / HTTP/1.1" 200 -
+2019-10-04 14:39:58,128     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:39:58] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:39:58,349     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:39:58] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 14:39:58,441     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:39:58] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 14:39:58,461     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:39:58] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 14:40:03,444     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:03] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 14:40:06,377     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:06] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 14:40:08,922     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:08] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:40:08,980     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:08] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:40:31,342     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:40:36,120     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:36] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:40:36,191     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:36] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:40:40,773     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:40] "GET /member HTTP/1.1" 200 -
+2019-10-04 14:40:40,839     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:40] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:40:50,527     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:50] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:40:50,603     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:40:50] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:42:50,878     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:42:57,986     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:42:57] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:42:58,056     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:42:58] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:43:04,415     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:43:04] "GET /member HTTP/1.1" 200 -
+2019-10-04 14:43:04,477     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:43:04] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:43:08,015     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:43:08] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:43:08,084     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:43:08] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:44:06,195     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:44:11,623     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:44:11] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:44:11,686     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:44:11] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:47:56,715     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:47:56] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:47:56,782     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:47:56] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:48:11,845     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:48:21,077     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:48:21] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:48:21,131     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:48:21] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:52:55,358     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:52:55,721     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:52:55] "GET / HTTP/1.1" 200 -
+2019-10-04 14:53:06,258     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:53:06] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 14:53:09,081     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:53:09] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 14:53:17,433     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:53:17] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:57:40,547     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:57:40] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:57:40,604     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:57:40] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:57:54,250     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:58:00,926     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:58:00] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 14:58:00,985     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:58:00] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 14:59:18,431     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 14:59:31,836     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 14:59:31] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:00:46,755     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:00:53,745     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:00:53] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:01:05,688     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:01:05] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:06:31,653     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:06:37,396     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:06:37] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:08:04,840     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:08:12,372     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:08:12] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:08:12,430     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:08:12] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:10:09,940     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:10:16,514     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:10:16] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:10:16,569     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:10:16] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:11:08,790     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:11:55,950     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:11:55] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:11:56,002     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:11:56] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:14:19,893     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:19] "GET / HTTP/1.1" 200 -
+2019-10-04 15:14:19,976     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:19] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:14:20,191     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:20] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 15:14:20,291     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:20] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 15:14:20,342     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:20] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 15:14:24,604     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:24] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 15:14:26,654     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:26] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 15:14:59,541     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:59] "POST /addmenu HTTP/1.1" 200 -
+2019-10-04 15:14:59,606     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:59] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:14:59,608     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:59] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 15:14:59,913     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:14:59] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 15:15:00,117     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:15:00] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 15:15:03,879     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:15:03] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 15:15:06,258     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:15:06] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 15:37:26,409     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:37:50,034     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:37:50] "GET /look_in_DB HTTP/1.1" 200 -
+2019-10-04 15:37:50,416     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:37:50] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:46:33,792     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:46:40,621    ERROR app.py:L1761: Exception on /ordercheck [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.SyntaxError: syntax error at or near "年09月24日"
+LINE 1: ...elect * from (select * from menu where date = 2019年09月24日...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\host.py", line 336, in ordercheck
+    meals = pd.read_sql(query, db_engine)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 436, in read_sql
+    chunksize=chunksize,
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 1218, in read_query
+    result = self.execute(*args)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 1087, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 2075, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 942, in execute
+    return self._execute_text(object, multiparams, params)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1104, in _execute_text
+    statement, parameters
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.SyntaxError) syntax error at or near "年09月24日"
+LINE 1: ...elect * from (select * from menu where date = 2019年09月24日...
+                                                             ^
+ [SQL: 'select * from (select * from menu where date = 2019年09月24日) as menu inner join meal on menu.meal_id = meal.id'] (Background on this error at: http://sqlalche.me/e/f405)
+2019-10-04 15:46:40,671     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:46:40] "GET /ordercheck HTTP/1.1" 500 -
+2019-10-04 15:47:41,816     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:47:51,808    ERROR app.py:L1761: Exception on /ordercheck [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\indexes\base.py", line 2890, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas\_libs\index.pyx", line 107, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 131, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1607, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1614, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'meal_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\host.py", line 339, in ordercheck
+    meal_group = df[df['meal_id'] == row['meal_id']]
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\frame.py", line 2975, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\indexes\base.py", line 2892, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas\_libs\index.pyx", line 107, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 131, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1607, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1614, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'meal_id'
+2019-10-04 15:47:51,847     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:47:51] "GET /ordercheck HTTP/1.1" 500 -
+2019-10-04 15:48:02,652    ERROR app.py:L1761: Exception on /ordercheck [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\indexes\base.py", line 2890, in get_loc
+    return self._engine.get_loc(key)
+  File "pandas\_libs\index.pyx", line 107, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 131, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1607, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1614, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'meal_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\host.py", line 339, in ordercheck
+    meal_group = df[df['meal_id'] == row['meal_id']]
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\frame.py", line 2975, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\core\indexes\base.py", line 2892, in get_loc
+    return self._engine.get_loc(self._maybe_cast_indexer(key))
+  File "pandas\_libs\index.pyx", line 107, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 131, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1607, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1614, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'meal_id'
+2019-10-04 15:48:02,654     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:48:02] "GET /ordercheck HTTP/1.1" 500 -
+2019-10-04 15:49:31,935     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:49:39,603     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:49:39] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:49:39,660     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:49:39] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:50:39,527     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:50:46,176     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:50:46] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 15:50:46,234     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:50:46] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:51:14,400     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:14] "GET / HTTP/1.1" 200 -
+2019-10-04 15:51:14,465     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:14] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 15:51:14,654     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:14] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 15:51:14,791     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:14] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 15:51:15,072     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:15] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 15:51:17,786     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:17] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 15:51:19,657     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:19] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 15:51:22,734     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:22] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 15:51:31,624     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:51:31] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 15:59:04,770     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 15:59:19,946    ERROR app.py:L1761: Exception on /ordercheck [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\host.py", line 351, in ordercheck
+    for i in range(stock-ordernum):
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+2019-10-04 15:59:19,951     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 15:59:19] "GET /ordercheck HTTP/1.1" 500 -
+2019-10-04 16:00:24,888     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:00:35,446     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:00:35] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:00:35,499     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:00:35] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:01:26,349     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:02:08,014     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:02:08] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:02:08,068     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:02:08] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:03:18,066     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:03:30,889     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:03:30] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:03:30,952     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:03:30] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:05:30,859     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:05:40,063     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:05:40] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:05:40,108     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:05:40] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:05:50,238     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:05:50] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:05:50,294     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:05:50] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:12:15,735     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:12:30,636     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:12:30] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:12:30,691     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:12:30] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:13:08,585     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:13:16,310    ERROR app.py:L1761: Exception on /ordercheck [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\host.py", line 362, in ordercheck
+    return render_template('ordercheck.html', date=date, orders=ordercheck_dict)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\loaders.py", line 125, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 591, in compile
+    self.handle_exception(exc_info, source_hint=source_hint)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\templates\ordercheck.html", line 14, in template
+    <td>{{ name | row}}</td>
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\environment.py", line 543, in _generate
+    optimized=self.optimized)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 82, in generate
+    generator.visit(node)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 799, in visit_Template
+    self.blockvisit(block.body, block_frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1122, in visit_For
+    self.blockvisit(node.body, loop_frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1122, in visit_For
+    self.blockvisit(node.body, loop_frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1122, in visit_For
+    self.blockvisit(node.body, loop_frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1122, in visit_For
+    self.blockvisit(node.body, loop_frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 378, in blockvisit
+    self.visit(node, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1358, in visit_Output
+    self.visit(argument, frame)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\visitor.py", line 38, in visit
+    return f(node, *args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 70, in new_func
+    return f(self, node, frame, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 1578, in visit_Filter
+    self.fail('no filter named %r' % node.name, node.lineno)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\jinja2\compiler.py", line 315, in fail
+    raise TemplateAssertionError(msg, lineno, self.name, self.filename)
+jinja2.exceptions.TemplateAssertionError: no filter named 'row'
+2019-10-04 16:13:16,349     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:13:16] "GET /ordercheck HTTP/1.1" 500 -
+2019-10-04 16:18:20,609     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:18:33,315     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:18:39,561     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:18:39] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:18:39,621     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:18:39] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:19:10,139     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:19:19,647     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:19:19] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:19:19,704     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:19:19] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:20:53,639     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:21:02,118     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:21:02] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:21:02,181     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:21:02] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:21:30,454     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:21:36,943     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:21:36] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:21:36,993     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:21:36] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:27:41,099     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:27:41,173     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:41] "GET / HTTP/1.1" 200 -
+2019-10-04 16:27:41,410     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:41] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:27:41,432     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:41] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 16:27:41,557     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:41] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 16:27:41,594     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:41] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 16:27:47,785     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:47] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:27:51,074     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:51] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:27:53,674     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:53] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:27:53,738     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:27:53] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:29:11,274     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 16:29:20,786     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:29:20] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:29:20,845     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:29:20] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:32:36,528     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:32:36] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:32:36,585     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:32:36] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:32:53,128     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:32:53] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:32:53,184     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:32:53] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:33:33,669     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:33:41,132     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:33:41] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:33:41,205     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:33:41] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:39:02,517     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:39:02] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:39:13,851     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:39:21,880     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:39:21] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:40:48,408     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:40:54,576     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:40:54] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:42:56,800     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:42:56] "GET / HTTP/1.1" 200 -
+2019-10-04 16:42:59,855     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:42:59] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:43:01,399     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:01] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 16:43:05,294     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:05] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:43:31,135     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:31] "POST /editmenu HTTP/1.1" 200 -
+2019-10-04 16:43:34,175     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:34] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:43:35,746     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:35] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 16:43:39,731     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:39] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:43:50,975     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:50] "GET / HTTP/1.1" 200 -
+2019-10-04 16:43:54,065     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:54] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:43:55,558     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:55] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 16:43:58,894     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:43:58] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:44:01,853     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:44:01] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:44:06,881     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:44:06] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:44:12,519     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:44:12] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:45:16,335     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:16] "GET /member HTTP/1.1" 200 -
+2019-10-04 16:45:20,259     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:20] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:45:38,313     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:38] "GET / HTTP/1.1" 200 -
+2019-10-04 16:45:41,400     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:41] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:45:42,907     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:42] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 16:45:46,288     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:46] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:45:49,251     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:49] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:45:52,549     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:45:52] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:46:06,684     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:46:06] "POST /editmenu HTTP/1.1" 200 -
+2019-10-04 16:46:09,730     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:46:09] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:46:11,332     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:46:11] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 16:46:14,595     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:46:14] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 16:46:19,690     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:46:19] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:48:07,154     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:48:07] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:48:17,725     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:48:25,186     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:48:25] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:51:08,586     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:51:15,327     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:51:15] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:51:50,750     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:51:56,799     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:51:56] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:52:54,634     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:53:00,831     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:53:00] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:53:35,288     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:53:35] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:53:35,307     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:53:35] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 16:56:20,137     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 16:56:30,007     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 16:56:30] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 16:59:55,292     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:00:01,696     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:01] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:00:01,765     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:01] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:00:01,765     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:01] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:00:39,029     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:00:45,218     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:45] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:00:45,280     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:45] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:00:45,322     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:00:45] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:01:56,350     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:02:02,576     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:02] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:02:02,636     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:02] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:02:02,656     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:02] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:02:07,607     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:07] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:02:07,650     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:07] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:02:07,682     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:02:07] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:03:07,916     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:03:14,954     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:03:14] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:03:15,011     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:03:15] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:03:15,014     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:03:15] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:04:18,323     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:04:24,660     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:24] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:04:24,740     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:24] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:04:24,749     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:24] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:04:53,099     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:53] "GET /member HTTP/1.1" 200 -
+2019-10-04 17:04:53,169     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:53] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:04:53,176     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:53] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:04:54,711     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:54] "GET / HTTP/1.1" 200 -
+2019-10-04 17:04:54,805     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:54] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:04:54,980     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:54] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 17:04:55,121     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:55] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 17:04:55,126     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:55] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 17:04:55,386     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:55] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:04:57,981     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:57] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:04:59,755     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:04:59] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:05:01,223     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:01] "GET /meal HTTP/1.1" 200 -
+2019-10-04 17:05:01,278     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:01] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:05:01,583     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:01] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:05:03,990     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:03] "GET / HTTP/1.1" 200 -
+2019-10-04 17:05:04,053     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:04] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:05:04,260     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:04] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 17:05:04,361     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:04] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 17:05:04,396     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:04] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 17:05:04,625     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:04] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:05:07,224     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:07] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:05:09,006     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:09] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:05:15,582     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:15] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:05:15,638     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:15] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:05:15,942     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:15] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:05:41,736     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:41] "GET / HTTP/1.1" 200 -
+2019-10-04 17:05:41,818     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:41] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:05:41,999     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:41] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 17:05:42,132     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:42] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 17:05:42,154     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:42] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 17:05:42,424     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:42] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:05:52,775     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:05:59,039     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:59] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:05:59,096     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:59] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:05:59,101     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:05:59] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:08:01,942     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:08:08,145     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:08:08] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:08:08,191     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:08:08] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:08:08,198     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:08:08] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:08:48,715     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:09:03,628     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:09:03] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:09:03,686     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:09:03] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:09:03,691     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:09:03] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:16:15,125     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:16:41,303     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:16:41] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:16:41,349     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:16:41] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:16:41,377     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:16:41] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:25:56,887     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:26:03,319     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:26:03] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:26:03,725     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:26:03] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 17:26:03,782     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:26:03] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 17:35:53,842     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:35:55,576     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:35:55] "GET / HTTP/1.1" 200 -
+2019-10-04 17:36:01,671     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:36:01] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:36:03,446     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:36:03] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:36:06,494     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:36:06] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:38:39,710     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:38:48,288     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:38:48] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:40:57,262     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:41:06,268     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:06] "GET / HTTP/1.1" 200 -
+2019-10-04 17:41:12,654     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:12] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:41:14,112     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:14] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:41:17,311     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:17] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:41:20,725     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:20] "GET / HTTP/1.1" 200 -
+2019-10-04 17:41:23,700     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:23] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:41:25,451     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:25] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:41:28,316     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:28] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:41:54,249     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:54] "POST /editmenu HTTP/1.1" 200 -
+2019-10-04 17:41:57,261     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:57] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:41:58,849     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:41:58] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:42:02,157     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:42:02] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:44:01,568     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:44:08,377     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:44:08] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:44:30,249     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:44:30] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:45:58,339     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:46:20,668     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:46:20] "GET / HTTP/1.1" 200 -
+2019-10-04 17:46:27,585     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:46:27] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 17:46:29,667     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:46:29] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 17:46:30,222     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:46:30] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-04 17:46:33,469     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:46:33] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:47:52,052     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:47:58,301     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:47:58] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:49:28,356     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 17:49:34,711     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:49:34] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 17:49:34,769     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 17:49:34] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 18:00:12,818     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 18:00:15,378     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:00:15] "GET / HTTP/1.1" 200 -
+2019-10-04 18:00:22,031     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:00:22] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 18:00:23,594     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:00:23] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 18:00:24,884     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:00:24] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-04 18:05:26,653     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 18:05:28,579     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET / HTTP/1.1" 200 -
+2019-10-04 18:05:28,649     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 18:05:28,800     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 18:05:28,964     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 18:05:28,974     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 18:05:28,996     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:28] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 18:05:29,021     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:29] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 18:05:35,387     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:35] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 18:05:36,882     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 18:05:36] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:02:34,914     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 19:02:35,029     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET / HTTP/1.1" 200 -
+2019-10-04 19:02:35,129     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 19:02:35,259     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 19:02:35,441     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 19:02:35,446     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 19:02:35,466     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 19:02:35,475     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:35] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 19:02:41,987     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:41] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:02:43,845     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:02:43] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:05:08,555     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:05:08] "GET / HTTP/1.1" 200 -
+2019-10-04 19:05:11,844     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:05:11] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:05:13,434     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:05:13] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:15:36,601     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 19:16:03,405     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 19:16:12,660     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:12] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 19:16:20,261     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:20] "GET /api HTTP/1.1" 404 -
+2019-10-04 19:16:27,579     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:27] "GET /api/menu/20190911 HTTP/1.1" 404 -
+2019-10-04 19:16:44,695     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:44] "GET / HTTP/1.1" 200 -
+2019-10-04 19:16:47,738     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:47] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:16:49,256     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:16:49] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:17:08,087     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:17:08] "GET /api HTTP/1.1" 404 -
+2019-10-04 19:17:23,034     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:17:23] "GET /api/order/11id=sss HTTP/1.1" 404 -
+2019-10-04 19:17:29,905     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:17:29] "GET /api/order/11/sss HTTP/1.1" 404 -
+2019-10-04 19:18:47,747     INFO _internal.py:L122:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2019-10-04 19:18:47,995     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:18:47] "GET /api/ HTTP/1.1" 404 -
+2019-10-04 19:18:55,738     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:18:55] "GET /api/ HTTP/1.1" 404 -
+2019-10-04 19:19:15,182     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:19:15,380     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:15] "GET /api/ HTTP/1.1" 200 -
+2019-10-04 19:19:15,544     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:15] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2019-10-04 19:19:15,645     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:15] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2019-10-04 19:19:15,861     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:15] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+2019-10-04 19:19:15,890     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:15] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2019-10-04 19:19:16,451     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:16] "GET /api/swagger.json HTTP/1.1" 200 -
+2019-10-04 19:19:16,475     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:16] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2019-10-04 19:19:32,504    ERROR app.py:L1761: Exception on /api/menu/20190911 [GET]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: missing FROM-clause entry for table "manu"
+LINE 2:         select manu.date, meal.name from (select * from menu...
+                       ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 325, in wrapper
+    resp = resource(*args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\apis\menu.py", line 18, in get
+    df = pd.read_sql(query, db_engine)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 436, in read_sql
+    chunksize=chunksize,
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 1218, in read_query
+    result = self.execute(*args)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\pandas\io\sql.py", line 1087, in execute
+    return self.connectable.execute(*args, **kwargs)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 2075, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 942, in execute
+    return self._execute_text(object, multiparams, params)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1104, in _execute_text
+    statement, parameters
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) missing FROM-clause entry for table "manu"
+LINE 2:         select manu.date, meal.name from (select * from menu...
+                       ^
+ [SQL: '\n        select manu.date, meal.name from (select * from menu where date = 20190911) as menu inner join meal on menu.meal_id = meal.id\n                '] (Background on this error at: http://sqlalche.me/e/f405)
+2019-10-04 19:19:32,557     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:19:32] "GET /api/menu/20190911 HTTP/1.1" 500 -
+2019-10-04 19:20:06,112     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:20:17,770     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:20:17] "GET /api/menu/20190911 HTTP/1.1" 200 -
+2019-10-04 19:46:57,617     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:46:57,672     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:46:57] "GET / HTTP/1.1" 200 -
+2019-10-04 19:47:04,150     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:47:04] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:47:05,763     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:47:05] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:53:35,775     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:53:35,853     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:53:35] "GET / HTTP/1.1" 200 -
+2019-10-04 19:53:42,269     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:53:42] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:53:43,923     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:53:43] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:57:15,036     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:57:15,199     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:15] "GET / HTTP/1.1" 200 -
+2019-10-04 19:57:21,398     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:21] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:57:22,957     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:22] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:57:37,177     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET / HTTP/1.1" 200 -
+2019-10-04 19:57:37,261     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 19:57:37,434     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 19:57:37,545     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/menu.js HTTP/1.1" 200 -
+2019-10-04 19:57:37,593     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 19:57:37,597     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 19:57:37,605     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:37] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 19:57:40,935     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:40] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 19:57:42,419     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:57:42] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 19:59:55,648     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 19:59:55,772     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:55] "GET / HTTP/1.1" 200 -
+2019-10-04 19:59:55,896     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:55] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 19:59:56,021     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:56] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 19:59:56,214     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:56] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 19:59:56,239     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:56] "GET /static/menu2.js HTTP/1.1" 200 -
+2019-10-04 19:59:56,243     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:56] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 19:59:56,320     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 19:59:56] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:00:03,125     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:03] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 20:00:04,666     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:04] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 20:00:29,168     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:29] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-04 20:00:29,221     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:29] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 20:00:29,235     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:29] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 20:00:29,538     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:29] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:00:32,430     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:32] "GET /member HTTP/1.1" 200 -
+2019-10-04 20:00:32,477     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:32] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 20:00:32,486     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:32] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 20:00:32,826     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:32] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:00:36,159     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET / HTTP/1.1" 200 -
+2019-10-04 20:00:36,462     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 20:00:36,538     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/menu2.js HTTP/1.1" 200 -
+2019-10-04 20:00:36,549     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 20:00:36,550     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 20:00:36,554     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 20:00:36,590     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:36] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:00:40,391     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:00:40] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 20:19:56,786     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 20:20:13,391     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:20:13] "GET / HTTP/1.1" 200 -
+2019-10-04 20:20:19,652     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:20:19] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 20:20:21,278     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:20:21] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 20:20:21,662     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:20:21] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-04 20:20:21,908     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:20:21] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-04 20:21:10,556     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET / HTTP/1.1" 200 -
+2019-10-04 20:21:10,631     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 20:21:10,812     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 20:21:10,941     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 20:21:10,945     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/menu2.js HTTP/1.1" 200 -
+2019-10-04 20:21:10,951     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 20:21:10,958     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:10] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:21:14,177     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:14] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 20:21:15,973     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:21:15] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 20:28:55,113     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 20:28:55,284     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET / HTTP/1.1" 200 -
+2019-10-04 20:28:55,399     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-04 20:28:55,704     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-04 20:28:55,706     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/menu2.js HTTP/1.1" 200 -
+2019-10-04 20:28:55,712     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-04 20:28:55,758     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-04 20:28:55,766     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:28:55] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-04 20:29:02,197     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:29:02] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-04 20:29:03,987     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 20:29:03] "GET /get_meals HTTP/1.1" 200 -
+2019-10-04 23:55:54,773     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 23:56:58,629     INFO client.py:L70: Request body: {"events":[{"type":"postback","replyToken":"44908563d9dc4dbba1dde91e917f8cdc","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201020109,"postback":{"data":"{'action':'rich_menu'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:57:03,482     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:57:03] "POST /callback HTTP/1.1" 200 -
+2019-10-04 23:57:06,193     INFO client.py:L70: Request body: {"events":[{"type":"postback","replyToken":"bc6a1b2bf14f49a1a641f97e5ca4cd40","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201027875,"postback":{"data":"{'action':'rich_order'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:57:10,737     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:57:10] "POST /callback HTTP/1.1" 200 -
+2019-10-04 23:57:18,402     INFO client.py:L70: Request body: {"events":[{"type":"postback","replyToken":"b5407976190c45c29e46334ed94415b8","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201040125,"postback":{"data":"{'action':'order', 'meal_id':'19fce956-29a9-4ec4-841a-001f53dc92ca','size': 1,'date':20191005}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:57:19,325    ERROR app.py:L1761: Exception on /callback [POST]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 74, in callback
+    handler.handle(body, signature)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\linebot\webhook.py", line 260, in handle
+    func(event)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 272, in postback
+    order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size, timestamp=now())
+TypeError: 'datetime.datetime' object is not callable
+2019-10-04 23:57:19,346     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:57:19] "POST /callback HTTP/1.1" 500 -
+2019-10-04 23:59:29,632     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-04 23:59:29,773     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"be54ad793fba4352833b75e1882165b9","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201171503,"postback":{"data":"{'action':'rich_check'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:59:29,775     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:59:29] "POST /callback HTTP/1.1" 200 -
+2019-10-04 23:59:33,570     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"b9c211a637cc4465ba21d3c549eaf74e","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201175275,"postback":{"data":"{'action':'rich_check'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:59:33,571     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:59:33] "POST /callback HTTP/1.1" 200 -
+2019-10-04 23:59:35,097     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"d6d41e8eca9b46efb4d99f038d9fc108","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201177203,"postback":{"data":"{'action':'rich_check'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:59:35,098     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:59:35] "POST /callback HTTP/1.1" 200 -
+2019-10-04 23:59:36,574     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"03a752bdbc0844a09c84c6ca00bdc47a","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201178284,"postback":{"data":"{'action':'rich_cancel'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-04 23:59:36,575     INFO _internal.py:L122: 127.0.0.1 - - [04/Oct/2019 23:59:36] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:00:15,155     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-05 00:00:16,479     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"0540b694c7064ccf80363b1fe239c1d3","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201218189,"postback":{"data":"{'action':'rich_menu'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:00:21,055     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:00:21] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:00:26,560     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"3d2639eafb43410fab6e9918f03a341f","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201228272,"postback":{"data":"{'action':'rich_order'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:00:30,989     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:00:30] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:00:33,650     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"b9cda2ae3447431fb3e789a6623693f9","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201235363,"postback":{"data":"{'action':'order', 'meal_id':'1602e8b9-0ef0-4a4d-964d-42f9108342ed','size': 2,'date':20191005}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:00:34,546    ERROR app.py:L1761: Exception on /callback [POST]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 70, in callback
+    handler.handle(body, signature)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\linebot\webhook.py", line 260, in handle
+    func(event)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 268, in postback
+    order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size, timestamp=now())
+TypeError: 'datetime.datetime' object is not callable
+2019-10-05 00:00:34,550     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:00:34] "POST /callback HTTP/1.1" 500 -
+2019-10-05 00:02:05,525     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-05 00:02:10,681     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"3ce2fd5134b84b09925186be99851ddb","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201332203,"postback":{"data":"{'action':'order', 'meal_id':'1602e8b9-0ef0-4a4d-964d-42f9108342ed','size': 1,'date':20191005}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:02:44,670    ERROR app.py:L1761: Exception on /callback [POST]
+Traceback (most recent call last):
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask_restplus\api.py", line 584, in error_router
+    return original_handler(e)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 70, in callback
+    handler.handle(body, signature)
+  File "C:\Users\akayama\Anaconda3\envs\lineapp\lib\site-packages\linebot\webhook.py", line 260, in handle
+    func(event)
+  File "C:\Users\akayama\Dropbox\gitlab\lineapp\views\client.py", line 268, in postback
+    order = Orders(user_id=user_id, date=order_date, meal_id=meal_id, size=size, timestamp=now())
+TypeError: 'datetime.datetime' object is not callable
+2019-10-05 00:02:44,677     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:02:44] "POST /callback HTTP/1.1" 500 -
+2019-10-05 00:04:08,618     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-05 00:04:13,191     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"7299b9976e54464da68fe54e2cbaee80","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201454694,"postback":{"data":"{'action':'order', 'meal_id':'1602e8b9-0ef0-4a4d-964d-42f9108342ed','size': 1,'date':20191005}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:05:47,041     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-05 00:05:56,226     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"f3f933fe28024af58e14df05e69e559c","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201557737,"postback":{"data":"{'action':'order', 'meal_id':'1602e8b9-0ef0-4a4d-964d-42f9108342ed','size': 1,'date':20191005}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:06:03,047     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:06:03] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:08:30,556     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"85db22bb540c47099fb7778c1655c43c","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201712059,"postback":{"data":"{'action':'rich_cancel'}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:08:33,340     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:08:33] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:08:36,267     INFO client.py:L66: Request body: {"events":[{"type":"postback","replyToken":"1956c0e542424a84ae1152b8f548e5b0","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201717981,"postback":{"data":"{'action':'cancelyes', 'date':20191005, 'meal_id':'1602e8b9-0ef0-4a4d-964d-42f9108342ed', 'size':1}"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:08:37,539     INFO client.py:L66: Request body: {"events":[{"type":"message","replyToken":"d2bda80423a049b4ab0f80bdea630d25","source":{"userId":"U6c8f1bb0cfb39e08bb5052f6d6fb602d","type":"user"},"timestamp":1570201717979,"message":{"type":"text","id":"10683440360894","text":"はい"}}],"destination":"Uc6f74f54212d62b7c501f4bb3513e53e"}
+2019-10-05 00:08:37,540     INFO client.py:L81: user_id:U6c8f1bb0cfb39e08bb5052f6d6fb602d text:はい
+2019-10-05 00:08:37,540     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:08:37] "POST /callback HTTP/1.1" 200 -
+2019-10-05 00:08:38,258     INFO _internal.py:L122: 127.0.0.1 - - [05/Oct/2019 00:08:38] "POST /callback HTTP/1.1" 200 -
+2019-10-19 15:14:41,171     INFO _internal.py:L122:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2019-10-19 15:14:56,308     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET / HTTP/1.1" 200 -
+2019-10-19 15:14:56,518     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET /static/style.css HTTP/1.1" 200 -
+2019-10-19 15:14:56,552     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET /static/style2.css HTTP/1.1" 200 -
+2019-10-19 15:14:56,800     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET /static/jquery.minicalendar.js HTTP/1.1" 200 -
+2019-10-19 15:14:56,806     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET /static/menu2.js HTTP/1.1" 200 -
+2019-10-19 15:14:56,811     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:56] "GET /static/menu_edit2.js HTTP/1.1" 200 -
+2019-10-19 15:14:57,127     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:14:57] "GET /static/print.css HTTP/1.1" 200 -
+2019-10-19 15:15:02,916     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:02] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-19 15:15:04,764     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:04] "GET /get_meals HTTP/1.1" 200 -
+2019-10-19 15:15:04,836     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:04] "GET /favicon.ico HTTP/1.1" 404 -
+2019-10-19 15:15:14,476     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:14] "GET /member HTTP/1.1" 200 -
+2019-10-19 15:15:17,372     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:17] "GET /meal HTTP/1.1" 200 -
+2019-10-19 15:15:20,857     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:20] "GET /ordercheck HTTP/1.1" 200 -
+2019-10-19 15:15:23,538     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:23] "GET / HTTP/1.1" 200 -
+2019-10-19 15:15:26,594     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:26] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-19 15:15:28,391     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:28] "GET /get_meals HTTP/1.1" 200 -
+2019-10-19 15:15:32,112     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:32] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-19 15:15:36,230     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:36] "POST /update_calendar HTTP/1.1" 200 -
+2019-10-19 15:15:39,747     INFO _internal.py:L122: 127.0.0.1 - - [19/Oct/2019 15:15:39] "POST /update_calendar HTTP/1.1" 200 -

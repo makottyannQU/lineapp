@@ -2,4 +2,3 @@
 upload/*
 logs/*
 *.pyc
-/settings.py
